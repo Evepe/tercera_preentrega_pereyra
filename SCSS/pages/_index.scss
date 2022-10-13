@@ -223,7 +223,7 @@
         }
 
         &_parallax {
-            background-image: linear-gradient(#00000093, #00000038), url("../imagenes/saltosparallax.jpg");
+            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/saltosparallax.jpg");
             @include flex(flex-start, none, flex-end, none);
             @include parallax;
             height: 100vh;
@@ -339,7 +339,7 @@
         }
 
         &_parallax {
-            background-image: url(../imagenes/saltosseccion.jpeg);
+            background-image: url(../Imagenes/saltosseccion.jpeg);
             @include flex(flex-start, none, flex-end, none);
             @include parallax;
             height: 100vh;
