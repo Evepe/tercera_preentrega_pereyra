@@ -1,0 +1,103 @@
+.Saltos {
+    &_main_principal {
+        &_parallax {
+            background-image: url("../imagenes/saltosparallax.jpg");
+            @include parallax;
+            @include flex(space-around, center, center, flex-start);
+            flex-direction: column;
+            height: 100vh;
+
+            @media (min-width:992px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 25px;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+                background-image: url(../Imagenes/fondo.png);
+                background-attachment: fixed;
+            }
+
+            &_imagenes {
+                display: none;
+
+                @media (min-width:992px) {
+                    display: block;
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                    height: 100%;
+                    overflow: auto;
+                }
+            }
+
+            &_title {
+                font-size: toRem(50);
+                font-weight: 500;
+
+                @media (min-width:992px) {
+                    font-size: 7em;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+            }
+
+            &_subtitle {
+                font-size: toRem(40);
+
+                @media (min-width:992px) {
+                    font-size: 4em;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+
+                }
+            }
+        }
+    }
+
+    &_wrapper {
+        @include flex(center, center, center, center);
+
+        &_cont {
+            padding: toRem(5) toRem(20);
+
+            &_paragraph {
+                font-size: toRem(25);
+                text-align: center;
+                padding-bottom: toRem(15);
+                font-weight: 500;
+                border-bottom: 1Rem;
+            }
+
+            &_paragraph_dos {
+                font-size: toRem(20);
+                text-align: center;
+                padding-bottom: toRem(15);
+                font-weight: 500;
+
+            }
+        }
+
+        &_paragraph_imagenes {
+            width: 100%;
+            position:absolute;
+
+            .salto {
+                @include _parallax;
+            }
+
+        }
+
+        &_descripcion {
+            padding: toRem(5) toRem(20);
+            font-size: toRem(20);
+            text-align: justify;
+        }
+    }
+}

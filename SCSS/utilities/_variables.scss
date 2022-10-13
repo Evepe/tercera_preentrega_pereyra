@@ -1,0 +1,20 @@
+$white: #ffffff;
+$red: #ff2b43;
+$blue_gradient: #ADC9EA;
+$title_parallax: #FFFFFF96;
+$subtitle: #15106F7F;
+$grey: #0000003D;
+$dark: #000000;
+
+$colors: map-merge((“info”: $dark,
+            “danger”: $red,
+            “warning”: $blue_gradient,
+            “success”: $title_parallax,
+            “secundary”:$subtitle,
+            “grey”:$grey,
+        ),
+        $colors);
+
+@function colors($search) {
+    @return map-get($colors, $search);
+}

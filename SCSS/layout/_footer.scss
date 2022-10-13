@@ -1,0 +1,56 @@
+.footer {
+    background-image: url(../Imagenes/logo_fondo.gif);
+    @include parallax;
+    background-size: inherit;
+    @include flex (space-around, center, none, center);
+    flex-direction: column;
+    padding-top: toRem(20);
+
+    @media (min-width:992px) {
+        background-image: none;
+        display: grid;
+    grid-template-areas:
+        ". marca ."
+        "datos marca redes"
+        ". marca .";
+    }
+
+    &_contact{
+        p:nth-child(1)
+        {
+          font-weight: bold;
+        }
+        @media (min-width:992px){
+            grid-area: datos;
+        }
+    }
+
+   &_marca{
+    display: none;
+
+    @media (min-width:992px){
+        display: inline;
+        grid-area: marca;
+    }
+   }
+
+    &_redes {
+        @include flex (space-around, center, none, center);
+        padding: toRem(5) toRem(5);
+        @media (min-width:992px){
+            grid-area: redes;
+           
+            &_face {
+                margin-left: 10px;
+            }
+            
+            &_youtube {
+                margin-left: 10px;
+            }
+            
+            &_face {
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin flex ($just_cont, $just_item, $align_cont, $align_item) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $just_cont;
+    justify-items: $just_item;
+    align-content: $align_cont;
+    align-items: $align_item;
+}
+
+@mixin parallax{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
