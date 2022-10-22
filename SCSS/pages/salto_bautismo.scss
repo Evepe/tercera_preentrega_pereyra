@@ -1,22 +1,116 @@
 .Saltos {
     &_main_principal {
         &_parallax {
-            background-image: url("../imagenes/saltosparallax.jpg");
+            background-image: url("../Imagenes/saltosparallax.jpg");
             @include parallax;
-            @include flex(space-around, center, center, flex-start);
+            @include flex(flex-end, none, space-around, none);
             flex-direction: column;
             height: 100vh;
 
             @media (min-width:992px) {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr;
-                gap: 25px;
-                justify-content: center;
-                align-items: flex-start;
-                align-content: flex-start;
-                background-image: url(../Imagenes/fondo.png);
+                background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../Imagenes/saltosparallax.jpg");
                 background-attachment: fixed;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+
+            &_title {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                padding-left: 15px;
+                position: relative;
+                margin-top: 70px;
+
+                @media (min-width:992px) {
+                    color: black;
+                    font-size: 7em;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+            }
+
+            &_subtitle {
+                font-size: 3em;
+                width: 100%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+                padding-left: 15px;
+
+                @media (min-width:992px) {
+                    color: rgb(0, 0, 0);
+                    font-size: 4em;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                }
+            }
+        }
+
+        &_wrapper {
+            @include flex(none, none, space-around, none);
+            flex-direction: column;
+            background-image: url("../Imagenes/logo_fondo.gif");
+
+
+            @media (min-width:992px) {
+                background-image: url("../Imagenes/fondo.png");
+                @include parallax;
+                display: grid;
+                grid-template-areas:
+                    "paragraph_uno paragraph_uno"
+                    "parrafo imagenes"
+                    "parrafo imagenes"
+                    ". butom";
+                align-items: space-around;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;
+            }
+
+
+            &_cont {
+                @include flex(center, none, none, center);
+                flex-direction: column;
+                width: 100%;
+
+                @media (min-width:992px) {
+                    grid-area: "paragraph_uno";
+
+                }
+
+                &_paragraph {
+                    font-size: toRem(28);
+                    font-weight: 500;
+                    text-align: center;
+                    padding-top: toRem(20);
+
+                    @media (min-width:992px) {
+                        font-size: toRem(70);
+                        font-weight: bold;
+                        padding-top: toRem(30);
+                        padding-left: toRem(25)
+                    }
+                }
+
+                &_paragraph_dos {
+                    font-size: toRem(25);
+                    font-weight: 500;
+                    text-align: center;
+                    padding-top: toRem(10);
+
+                    @media (min-width:992px) {
+                        font-size: toRem(30);
+                        font-weight: 300;
+                        padding-top: toRem(20);
+                    }
+                }
+
             }
 
             &_imagenes {
@@ -24,80 +118,48 @@
 
                 @media (min-width:992px) {
                     display: block;
-                    grid-column-start: 3;
-                    grid-column-end: 4;
-                    grid-row-start: 1;
-                    grid-row-end: 4;
-                    height: 100%;
-                    overflow: auto;
+                    grid-area: "imagenes";
+
+                }
+
+
+                &_dos {
+                    display: none;
+
+                    @media (min-width:992px) {
+                        display: block;
+                        grid-area: "imagenes_dos";
+                        overflow: hidden;
+                        padding-left: toRem(300);
+
+                    }
+
+                    &_mobile {
+                        display: block;
+
+                        @media (min-width:992px) {
+                            display: none;
+                           
+                        }
+                    }
                 }
             }
 
-            &_title {
-                font-size: toRem(50);
-                font-weight: 500;
 
+            &_descripcion {
+                
                 @media (min-width:992px) {
-                    font-size: 7em;
-                    grid-column-start: 1;
-                    grid-column-end: 3;
-                    grid-row-start: 2;
-                    grid-row-end: 3;
+                    grid-area: "texto";
+                    font-size: toRem(20);
+                    font-weight: 500;
+                    width: 70%;
+                    padding-top: toRem(70);
+                    padding-left: toRem(50);
                 }
             }
-
-            &_subtitle {
-                font-size: toRem(40);
-
-                @media (min-width:992px) {
-                    font-size: 4em;
-                    grid-column-start: 1;
-                    grid-column-end: 3;
-                    grid-row-start: 3;
-                    grid-row-end: 4;
-
-                }
-            }
-        }
-    }
-
-    &_wrapper {
-        @include flex(center, center, center, center);
-
-        &_cont {
-            padding: toRem(5) toRem(20);
-
-            &_paragraph {
-                font-size: toRem(25);
-                text-align: center;
-                padding-bottom: toRem(15);
-                font-weight: 500;
-                border-bottom: 1Rem;
-            }
-
-            &_paragraph_dos {
-                font-size: toRem(20);
-                text-align: center;
-                padding-bottom: toRem(15);
-                font-weight: 500;
-
-            }
-        }
-
-        &_paragraph_imagenes {
-            width: 100%;
-            position:absolute;
-
-            .salto {
-                @include _parallax;
-            }
-
-        }
-
-        &_descripcion {
-            padding: toRem(5) toRem(20);
-            font-size: toRem(20);
-            text-align: justify;
         }
     }
 }
+                
+
+                       

@@ -64,7 +64,7 @@ a {
         padding: 5px 5px; } }
 
 .footer {
-  background-image: url(../Imagenes/logo_fondo.gif);
+  background-image: url("../Imagenes/logo_fondo.gif");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,7 +127,7 @@ a {
   height: 100vh; }
   @media (min-width: 992px) {
     .main_principal_parallax {
-      background-image: linear-gradient(#00000093, #00000038), url(../Imagenes/imagenContPrinc.png);
+      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png");
       background-attachment: fixed;
       flex-direction: column;
       justify-items: flex-start;
@@ -308,7 +308,7 @@ a {
     gap: 15px; } }
 
 .main_principal .salto_parallax {
-  background-image: linear-gradient(#00000093, #00000038), url("../imagenes/saltosparallax.jpg");
+  background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/saltosparallax.jpg");
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -415,7 +415,7 @@ a {
       grid-template-areas: "presentacion presentacion presentacion" ". articulo ." "boton . .";
       gap: 15px; } }
   .main_principal .curso_parallax {
-    background-image: url(../imagenes/saltosseccion.jpeg);
+    background-image: url("../Imagenes/saltosseccion.jpeg");
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -506,7 +506,7 @@ a {
     .main_principal .videos {
       justify-content: space-around;
       gap: 20px;
-      background-image: url(../Imagenes/logo_fondo.gif); } }
+      background-image: url("../Imagenes/logo_fondo.gif"); } }
   .main_principal .videos h2 {
     font-size: 3.125rem;
     text-align: center;
@@ -533,7 +533,8 @@ a {
       padding: 0.625rem 0; }
 
 .promociones_main_principal {
-  background-image: url(../Imagenes/promociones_background_mobile.png);
+  background-image: url("../Imagenes/promociones_background_mobile.png");
+  background-attachment: fixed;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -547,7 +548,7 @@ a {
   height: 100vh; }
   @media (min-width: 992px) {
     .promociones_main_principal {
-      background-image: url(../Imagenes/promocionesfondo.png);
+      background-image: url("../Imagenes/promocionesfondo.png");
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr); } }
@@ -595,88 +596,135 @@ a {
           width: 900px; } }
 
 .Saltos_main_principal_parallax {
-  background-image: url(../Imagenes/fondo_nubes.png);
+  background-image: url("../Imagenes/saltosparallax.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  justify-items: center;
-  align-content: center;
-  align-items: flex-start;
+  justify-content: flex-end;
+  justify-items: none;
+  align-content: space-around;
+  align-items: none;
   flex-direction: column;
   height: 100vh; }
   @media (min-width: 992px) {
     .Saltos_main_principal_parallax {
+      background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../Imagenes/saltosparallax.jpg");
+      background-attachment: fixed;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 25px;
-      justify-content: center;
-      align-items: flex-start;
-      align-content: flex-start;
-      background-image: url(../Imagenes/fondo.png);
-      background-attachment: fixed; } }
-  .Saltos_main_principal_parallax_imagenes {
-    display: none; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_parallax_imagenes {
-        display: block;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 4;
-        height: 100%;
-        overflow: auto; } }
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr); } }
   .Saltos_main_principal_parallax_title {
-    font-size: 3.125rem;
-    font-weight: 500; }
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    padding-left: 15px;
+    position: relative;
+    margin-top: 70px; }
     @media (min-width: 992px) {
       .Saltos_main_principal_parallax_title {
+        color: black;
         font-size: 7em;
+        grid-row-start: 1;
+        grid-row-end: 3;
         grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3; } }
+        grid-column-end: 2; } }
   .Saltos_main_principal_parallax_subtitle {
-    font-size: 2.5rem; }
+    font-size: 3em;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-left: 15px; }
     @media (min-width: 992px) {
       .Saltos_main_principal_parallax_subtitle {
+        color: black;
         font-size: 4em;
-        grid-column-start: 1;
-        grid-column-end: 3;
         grid-row-start: 3;
-        grid-row-end: 4; } }
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4; } }
 
-.Saltos_wrapper {
+.Saltos_main_principal_wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center; }
-  .Saltos_wrapper_cont {
-    padding: 0.3125rem 1.25rem; }
-    .Saltos_wrapper_cont_paragraph {
-      font-size: 1.5625rem;
-      text-align: center;
-      padding-bottom: 0.9375rem;
+  justify-content: none;
+  justify-items: none;
+  align-content: space-around;
+  align-items: none;
+  flex-direction: column;
+  background-image: url("../Imagenes/logo_fondo.gif"); }
+  @media (min-width: 992px) {
+    .Saltos_main_principal_wrapper {
+      background-image: url("../Imagenes/fondo.png");
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: grid;
+      grid-template-areas: "paragraph_uno paragraph_uno" "parrafo imagenes" "parrafo imagenes" ". butom";
+      align-items: space-around;
+      justify-content: center;
+      justify-items: center;
+      align-content: center; } }
+  .Saltos_main_principal_wrapper_cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: none;
+    align-content: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_wrapper_cont {
+        grid-area: "paragraph_uno"; } }
+    .Saltos_main_principal_wrapper_cont_paragraph {
+      font-size: 1.75rem;
       font-weight: 500;
-      border-bottom: 1Rem;
-      border-bottom-color: red; }
-    .Saltos_wrapper_cont_paragraph_dos {
-      font-size: 1.25rem;
       text-align: center;
-      padding-bottom: 0.9375rem;
-      font-weight: 500; }
-  .Saltos_wrapper_paragraph_imagenes {
-    width: 100%;
-    overflow: hidden; }
-    .Saltos_wrapper_paragraph_imagenes .salto {
-      width: 100%; }
-  .Saltos_wrapper_descripcion {
-    padding: 0.3125rem 1.25rem;
-    font-size: 1.25rem;
-    text-align: justify; }
+      padding-top: 1.25rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_cont_paragraph {
+          font-size: 4.375rem;
+          font-weight: bold;
+          padding-top: 1.875rem;
+          padding-left: 1.5625rem; } }
+    .Saltos_main_principal_wrapper_cont_paragraph_dos {
+      font-size: 1.5625rem;
+      font-weight: 500;
+      text-align: center;
+      padding-top: 0.625rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_cont_paragraph_dos {
+          font-size: 1.875rem;
+          font-weight: 300;
+          padding-top: 1.25rem; } }
+  .Saltos_main_principal_wrapper_imagenes {
+    display: none; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_wrapper_imagenes {
+        display: block;
+        grid-area: "imagenes"; } }
+    .Saltos_main_principal_wrapper_imagenes_dos {
+      display: none; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_imagenes_dos {
+          display: block;
+          grid-area: "imagenes_dos";
+          overflow: hidden;
+          padding-left: 18.75rem; } }
+      .Saltos_main_principal_wrapper_imagenes_dos_mobile {
+        display: block; }
+        @media (min-width: 992px) {
+          .Saltos_main_principal_wrapper_imagenes_dos_mobile {
+            display: none; } }
+  @media (min-width: 992px) {
+    .Saltos_main_principal_wrapper_descripcion {
+      grid-area: "texto";
+      font-size: 1.25rem;
+      font-weight: 500;
+      width: 70%;
+      padding-top: 4.375rem;
+      padding-left: 3.125rem; } }

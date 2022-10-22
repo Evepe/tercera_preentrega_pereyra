@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Imagenes/pestaña.svg"></a>
+    <link rel="shortcut icon" href="./Imagenes/pestaña.svg"></a>
     <link rel="stylesheet" href="./CSS/styles.css" type="text/css"></a>
     <title>SKYDIVE</title>
 </head>
@@ -17,10 +17,10 @@
         <nav>
             <ul class="main_header_nav">
                 <li>
-                    <a href=index.html> Inicio </a>
+                    <a href="index.html"> Inicio </a>
                 </li>
                 <li>
-                    <a href=promociones.html> promociones</a>
+                    <a href="promociones.html"> promociones</a>
                 </li>
                 <li>
                     <a href="salto_bautismo.html">Saltos</a>
@@ -38,21 +38,25 @@
     <!-- Inicia contenido principal -->
     <main class="Saltos_main_principal">
         <div class="Saltos_main_principal_parallax">
-            <div class="Saltos_main_principal_parallax_imagenes">
-                <img src="./Imagenes/paracaida.png" alt="paracaida" class="silueta">
-            </div>
             <h1 class="Saltos_main_principal_parallax_title">SALTOS DE BAUTISMO</h1>
             <h2 class="Saltos_main_principal_parallax_subtitle">Vivi una experiencia unica</h2>
         </div>
-        <div class="Saltos_wrapper">
-            <div class="Saltos_wrapper_cont">
-                <p class="Saltos_wrapper_cont_paragraph">Animate a saltar desde un avion!</p>
-                <p class="Saltos_wrapper_cont_paragraph_dos">PURA ADRENALINA EN CAIDA LIBRE A MAS DE 200KM/H!</p>
+        <div class="Saltos_main_principal_wrapper">
+            <div class="Saltos_main_principal_wrapper_cont">
+                <p class="Saltos_main_principal_wrapper_cont_paragraph">Animate a saltar desde un avion!</p>
+                <p class="Saltos_main_principal_wrapper_cont_paragraph_dos">PURA ADRENALINA EN CAIDA LIBRE A MAS DE 200KM/H!</p>
             </div>
-            <div class="Saltos_wrapper_cont_paragraph_imagenes">
-                <img src="./Imagenes/avion.png" alt="ilustracion" class="salto">
+            <div class="Saltos_main_principal_wrapper_imagenes">
+                <img src="./Imagenes/Salto.gif" alt="ilustracion" class="salto">
             </div>
-            <div class="Saltos_wrapper_descripcion">
+           
+            <div class="Saltos_main_principal_wrapper_imagenes_dos">
+                <img src="./Imagenes/salto_dos.gif" alt="ilustracion" class="salto_dos">
+            </div>
+            <div class="Saltos_main_principal_wrapper_imagenes_dos_mobile">
+                <img src="./Imagenes/salto_dos_mobile.gif" alt="ilustracion" class="salto">
+            </div>
+            <div class="Saltos_main_principal_wrapper_descripcion">
                 ¿Querés probar la sensación que se experimenta en la caída libre pero no
                 tenés
                 experiencia ni conocimientos sobre este deporte?</p>
@@ -78,9 +82,10 @@
                     y 10 minutos hasta el aterrizaje.</p>
                 <p>Algo importante: no se hacen reservas, los saltos se hacen por orden de llegada.</p>
             </div>
-            <div class="Saltos_wrapper_cta">RESERVA TU SALTO!</div>
-        </div>
-        <div class="Saltos_videos">
+            <div class="Saltos_main_principal_wrapper_cta">RESERVA TU SALTO!</div>
+            </div>
+           
+        <div class="Saltos_main_principal_videos">
             <iframe class="left" width="350" height="200" src="https://www.youtube.com/embed/q2SXPhtlFOs"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -94,8 +99,8 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <div class="Saltos_recomendaciones_fisicas">
-            <h3 class="Saltos_recomendaciones_fisicas_title"> RECOMENDACIONES FISICAS</h3>
+        <div class="Saltos_main_principal_recomendaciones_fisicas">
+            <h3 class="Saltos_main_principal_recomendaciones_fisicas_title"> RECOMENDACIONES FISICAS</h3>
             <p>Peso maximo hasta 90Kg.</p>
             <p>No recomendamos saltar congestionados,por la posibilidad de daños en oidos</p>
             <p>No sufrir de problemas del corazón, enfermedades que afecten el juicio de alguna forma, problemas de
@@ -103,8 +108,8 @@
                 problemas en brazos o piernas (consultar)</p>
             <p>Ser mayor de 17 años</p>
         </div>
-        <div class="Saltos_recomendaciones_indumentaria">
-            <h3 class="Saltos_recomendaciones_indumentaria">INDUMENTARIA RECOMENDADAS</h3>
+        <div class="Saltos_main_principal_recomendaciones_indumentaria">
+            <h3 class="Saltos_main_principal_recomendaciones_indumentaria">INDUMENTARIA RECOMENDADAS</h3>
             <p>Utilizar zapatillas y ropa no demasiado suelta. No se usan camperas por lo voluminosas. La idea es que no
                 haya
                 partes sueltas que puedan lastimar</p>
@@ -113,7 +118,7 @@
                 daño</p>
             <p>Guantes y cuellos de polar son recomendables en invierno</p>
         </div>
-        <div class="Saltos_wrapper_cta">
+        <div class="Saltos_main_principal_wrapper_cta">
             QUIERO MAS INFO
         </div>
     </main>
@@ -121,11 +126,12 @@
     <!-- Inicio footer -->
     <footer class="footer">
         <div class="footer_contact">
+            <p>SKYDIVE</p>
             <p>Tel: (02244)-15000000</p>
             <p>Mail:aaaaaa@gmail.com</p>
             <p>Ruta N° 3, Las Flores, Prov. Bs. As</p>
         </div>
-        <div class="marca">
+        <div class="footer_marca">
             <img src="./Imagenes/logoblack.png" alt="skydive">
         </div>
         <div class="footer_redes">

@@ -8,7 +8,7 @@
         height: 100vh;
 
         @media (min-width:992px) {
-            background-image: linear-gradient(#00000093, #00000038), url(../Imagenes/imagenContPrinc.png);
+            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png");
             background-attachment: fixed;
             flex-direction: column;
             justify-items: flex-start;
@@ -339,7 +339,7 @@
         }
 
         &_parallax {
-            background-image: url(../Imagenes/saltosseccion.jpeg);
+            background-image: url("../Imagenes/saltosseccion.jpeg");
             @include flex(flex-start, none, flex-end, none);
             @include parallax;
             height: 100vh;
@@ -431,7 +431,7 @@
         @media (min-width:992px) {
             justify-content: space-around;
             gap: 20px;
-            background-image: url(../Imagenes/logo_fondo.gif);
+            background-image: url("../Imagenes/logo_fondo.gif");
         }
 
         h2 {
