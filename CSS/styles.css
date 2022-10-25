@@ -1,9 +1,15 @@
 html {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; }
 
 * {
   padding: 0;
   margin: 0; }
+
+ul li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
 
 ul li {
   list-style-type: none; }
@@ -20,7 +26,6 @@ a {
   align-items: center;
   width: 100vw;
   background-color: aliceblue;
-  z-index: 0;
   display: flex;
   width: 100vw; }
   .main_header_nav {
@@ -35,6 +40,7 @@ a {
     .main_header_nav li {
       padding-left: 20px; }
       .main_header_nav li a {
+        color: black;
         font-size: 1em;
         font-weight: 500; }
         .main_header_nav li a :active {
@@ -50,18 +56,23 @@ a {
     justify-content: space-around;
     align-items: center;
     background-color: aliceblue;
-    z-index: 1; }
+    z-index: 4; }
     .main_header_nav {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       justify-content: end;
       gap: 0 20px;
-      text-align: center; }
-      .main_header_nav a:hover {
-        background-color: black;
-        border-radius: 15px;
-        color: white;
-        padding: 5px 5px; } }
+      text-align: center;
+      z-index: 4; }
+      .main_header_nav a {
+        color: black; }
+        .main_header_nav a:hover {
+          background-color: black;
+          border-radius: 15px;
+          color: white;
+          padding: 5px 5px; }
+        .main_header_nav a:active {
+          color: red; } }
 
 .footer {
   background-image: url("../Imagenes/logo_fondo.gif");
@@ -140,7 +151,7 @@ a {
   position: absolute;
   bottom: -10.625rem;
   font-weight: bolder;
-  z-index: 1; }
+  z-index: 5; }
   @media (min-width: 992px) {
     .main_principal_textbackground {
       font-size: 14.375rem; } }
@@ -595,6 +606,147 @@ a {
         .promociones_main_principal_imagen .ilustracion_promociones {
           width: 900px; } }
 
+.contact_main_principal_parallax {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Imagenes/fotoSchool.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  @media (min-width: 992px) {
+    .contact_main_principal_parallax {
+      background-attachment: fixed;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 0.9375rem; } }
+  .contact_main_principal_parallax_text_background {
+    color: rgba(0, 0, 0, 0.238);
+    font-size: 10.625rem;
+    word-break: break-all;
+    position: absolute;
+    font-weight: bolder;
+    z-index: 5; }
+    @media (min-width: 992px) {
+      .contact_main_principal_parallax_text_background {
+        font-size: 14.375rem; } }
+  .contact_main_principal_parallax_title {
+    color: rgba(255, 255, 255, 0.903);
+    font-size: 3em;
+    font-weight: bold;
+    padding-left: 15px;
+    position: absolute;
+    margin-top: 70px; }
+    @media (min-width: 992px) {
+      .contact_main_principal_parallax_title {
+        color: black;
+        font-size: 7em;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 6; } }
+
+.contact_main_principal_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: stretch;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Imagenes/fondo_curso_mobile.gif");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    .contact_main_principal_content {
+      display: grid;
+      grid-template-areas: "formulario mapa" "horarios .";
+      background-image: url("../Imagenes/fondo.png"); } }
+  .contact_main_principal_content_escribinos {
+    background-color: #00000079;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    margin: 1.25rem; }
+    @media (min-width: 992px) {
+      .contact_main_principal_content_escribinos {
+        border-radius: 1.25rem;
+        padding: 1.875rem;
+        margin: 1.25rem;
+        grid-area: formulario; } }
+    .contact_main_principal_content_escribinos_title {
+      color: white;
+      font-size: 1.75rem;
+      font-weight: 500;
+      text-align: center;
+      padding-top: 1.25rem; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_escribinos_title {
+          color: black;
+          font-size: 4.375rem;
+          font-weight: bold;
+          padding-top: 1.875rem;
+          padding-left: 1.5625rem; } }
+    .contact_main_principal_content_escribinos label {
+      color: white; }
+  .contact_main_principal_content_ubicacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    background-color: #00000079;
+    border-radius: 1.25rem;
+    padding: 1.875rem 1.25rem;
+    margin: 1.25rem 0.3125rem; }
+    @media (min-width: 992px) {
+      .contact_main_principal_content_ubicacion {
+        border-radius: 1.25rem;
+        padding: 1.875rem;
+        margin: 1.25rem;
+        grid-area: mapa; } }
+    .contact_main_principal_content_ubicacion_title {
+      color: white;
+      font-size: 1.75rem;
+      font-weight: 500;
+      text-align: center;
+      padding-top: 1.25rem; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_ubicacion_title {
+          color: black;
+          font-size: 4.375rem;
+          font-weight: bold;
+          padding-top: 1.875rem;
+          padding-left: 1.5625rem; } }
+    .contact_main_principal_content_ubicacion_maps_direccion_google {
+      display: none; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_ubicacion_maps_direccion_google {
+          display: block; } }
+    .contact_main_principal_content_ubicacion_maps_direccion_google_mobile {
+      display: block; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_ubicacion_maps_direccion_google_mobile {
+          display: none; } }
+    .contact_main_principal_content_ubicacion_horarios_atencion {
+      background-color: rgba(255, 255, 255, 0.348);
+      border-bottom: 1.5625rem; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_ubicacion_horarios_atencion {
+          background-color: rgba(255, 255, 255, 0.325);
+          border-bottom: 1.5625rem;
+          padding: 1.5625rem;
+          grid-area: horarios; } }
+
 .Saltos_main_principal_parallax {
   background-image: url("../Imagenes/saltosparallax.jpg");
   width: 100%;
@@ -649,12 +801,17 @@ a {
 .Saltos_main_principal_wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: none;
-  justify-items: none;
+  justify-content: center;
+  justify-items: center;
   align-content: space-around;
-  align-items: none;
+  align-items: center;
   flex-direction: column;
-  background-image: url("../Imagenes/logo_fondo.gif"); }
+  background-image: url("../Imagenes/promocionesfondo.png");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 1.25rem; }
   @media (min-width: 992px) {
     .Saltos_main_principal_wrapper {
       background-image: url("../Imagenes/fondo.png");
@@ -663,7 +820,6 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       display: grid;
-      grid-template-areas: "paragraph_uno paragraph_uno" "parrafo imagenes" "parrafo imagenes" ". butom";
       align-items: space-around;
       justify-content: center;
       justify-items: center;
@@ -677,27 +833,28 @@ a {
     align-items: center;
     flex-direction: column;
     width: 100%; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_wrapper_cont {
-        grid-area: "paragraph_uno"; } }
     .Saltos_main_principal_wrapper_cont_paragraph {
+      color: white;
       font-size: 1.75rem;
       font-weight: 500;
       text-align: center;
       padding-top: 1.25rem; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_cont_paragraph {
+          color: black;
           font-size: 4.375rem;
           font-weight: bold;
           padding-top: 1.875rem;
           padding-left: 1.5625rem; } }
     .Saltos_main_principal_wrapper_cont_paragraph_dos {
+      color: white;
       font-size: 1.5625rem;
       font-weight: 500;
       text-align: center;
       padding-top: 0.625rem; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_cont_paragraph_dos {
+          color: black;
           font-size: 1.875rem;
           font-weight: 300;
           padding-top: 1.25rem; } }
@@ -705,14 +862,12 @@ a {
     display: none; }
     @media (min-width: 992px) {
       .Saltos_main_principal_wrapper_imagenes {
-        display: block;
-        grid-area: "imagenes"; } }
+        display: block; } }
     .Saltos_main_principal_wrapper_imagenes_dos {
       display: none; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_imagenes_dos {
           display: block;
-          grid-area: "imagenes_dos";
           overflow: hidden;
           padding-left: 18.75rem; } }
       .Saltos_main_principal_wrapper_imagenes_dos_mobile {
@@ -720,11 +875,473 @@ a {
         @media (min-width: 992px) {
           .Saltos_main_principal_wrapper_imagenes_dos_mobile {
             display: none; } }
+  .Saltos_main_principal_wrapper_descripcion {
+    background-color: #0000004a;
+    border-radius: 0.3125rem;
+    margin: 0.3125rem;
+    padding-bottom: 0.9375rem; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_wrapper_descripcion {
+        background-color: rgba(255, 255, 255, 0.201);
+        border-radius: 5rem;
+        grid-area: "texto";
+        font-size: 1.25rem;
+        font-weight: 500;
+        width: 70%;
+        padding-top: 4.375rem;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem; } }
+    .Saltos_main_principal_wrapper_descripcion p {
+      color: white;
+      margin-left: 0.625rem;
+      margin-top: 0.625rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_descripcion p {
+          color: black;
+          margin-top: 0.3125rem; } }
+  .Saltos_main_principal_wrapper_cta {
+    background-color: #ff2b43;
+    padding: 0.3125rem;
+    border-radius: 0.125rem; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_wrapper_cta {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 0.625rem;
+        background-color: #ff2b43;
+        border-radius: 2.8125rem;
+        margin-bottom: 1.5625rem; }
+        .Saltos_main_principal_wrapper_cta:hover {
+          background-color: white; } }
+    .Saltos_main_principal_wrapper_cta a {
+      padding: 0.3125rem;
+      border-radius: 0.1875rem;
+      color: white; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_cta a {
+          font-weight: 500;
+          color: white; }
+          .Saltos_main_principal_wrapper_cta a:hover {
+            color: #ff2b43; } }
+
+.Saltos_main_principal_videos {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: none;
+  align-items: center;
+  flex-direction: column; }
   @media (min-width: 992px) {
-    .Saltos_main_principal_wrapper_descripcion {
-      grid-area: "texto";
+    .Saltos_main_principal_videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      flex-direction: row; } }
+  .Saltos_main_principal_videos iframe {
+    padding-top: 0.625rem; }
+
+.Saltos_main_principal_recomendaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Imagenes/fondo_recomendaciones.gif");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    .Saltos_main_principal_recomendaciones {
+      padding-top: 1.5625rem;
+      padding-bottom: 2.1875rem;
+      display: grid;
+      grid-template-areas: "title title title" "fisicas imagen indumentaria"; } }
+  .Saltos_main_principal_recomendaciones_title {
+    font-size: 3.125rem;
+    text-align: center; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_recomendaciones_title {
+        grid-area: title;
+        font-size: 3.125rem;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 1.25rem; } }
+  .Saltos_main_principal_recomendaciones_fisicas {
+    background-color: #ffffff4a;
+    padding: 1.25rem; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_recomendaciones_fisicas {
+        grid-area: fisicas;
+        background-color: #ffffff4a;
+        border-radius: 1.5625rem;
+        margin-left: 2.5rem;
+        padding-bottom: 1.25rem; } }
+    @media (min-width: 992) {
+      .Saltos_main_principal_recomendaciones_fisicas_title {
+        padding-left: 1.875rem;
+        padding-top: 1.25rem; } }
+    @media (min-width: 992) {
+      .Saltos_main_principal_recomendaciones_fisicas p {
+        padding-left: 1.875rem; } }
+  .Saltos_main_principal_recomendaciones_indumentaria {
+    background-color: #ffffff4a;
+    padding: 1.25rem; }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_recomendaciones_indumentaria {
+        grid-area: indumentaria;
+        border-radius: 1.5625rem;
+        margin-right: 2.5rem;
+        padding-bottom: 1.25rem; } }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_recomendaciones_indumentaria_title {
+        padding-left: 1.875rem;
+        padding-top: 1.25rem; } }
+    @media (min-width: 992px) {
+      .Saltos_main_principal_recomendaciones_indumentaria p {
+        padding-left: 1.875rem; } }
+  @media (min-width: 992px) {
+    .Saltos_main_principal_recomendaciones_img_rec {
+      grid-area: imagen; } }
+
+.cursos_main_principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Imagenes/curso_uno.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  @media (min-width: 992px) {
+    .cursos_main_principal {
+      background-image: url("../Imagenes/fondo_curso_present.gif"), linear-gradient(#000000b7, #00000038);
+      background-attachment: fixed;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 0.9375rem; } }
+  .cursos_main_principal_imagen {
+    display: none; }
+    @media (min-width: 992px) {
+      .cursos_main_principal_imagen {
+        display: flex;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        z-index: 3; } }
+  .cursos_main_principal_title {
+    font-size: 3.75rem;
+    margin-top: 1.875rem; }
+    @media (min-width: 992px) {
+      .cursos_main_principal_title {
+        font-size: 15.625rem;
+        font-weight: bold;
+        color: rgba(5, 5, 5, 0.666);
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 2; } }
+  .cursos_main_principal_paragraph {
+    background-color: rgba(255, 255, 255, 0.279);
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 0.9375rem; }
+    @media (min-width: 992px) {
+      .cursos_main_principal_paragraph {
+        width: 70%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.279);
+        font-size: 20px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        padding: 1.875rem;
+        margin-bottom: 6.25rem; } }
+
+.cursos_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Imagenes/fondo_curso_mobile.gif");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    .cursos_card {
+      background-image: url("../Imagenes/fondo.png");
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: grid;
+      grid-template-areas: "card card imagen" "etapas etapas etapas" "niveles niveles niveles"; } }
+  .cursos_card_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.397);
+    margin-top: 1.5625rem;
+    width: 90%;
+    border-radius: 0.9375rem; }
+    @media (min-width: 992px) {
+      .cursos_card_wrapper {
+        grid-area: card;
+        background-color: rgba(0, 0, 0, 0.397); } }
+    .cursos_card_wrapper_title {
+      margin-top: 0.9375rem;
+      font-size: 1.875rem;
+      text-align: center;
+      background-color: rgba(255, 43, 68, 0.534); }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_title {
+          font-size: 3.75rem;
+          padding: 1.875rem; } }
+    .cursos_card_wrapper_subtitle {
       font-size: 1.25rem;
-      font-weight: 500;
-      width: 70%;
-      padding-top: 4.375rem;
-      padding-left: 3.125rem; } }
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_subtitle {
+          font-size: 2.8125rem; } }
+    .cursos_card_wrapper_paragraph_costo {
+      font-size: 0.9375rem;
+      padding-top: 0.1875rem;
+      padding-bottom: 0.1875rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_paragraph_costo {
+          font-size: 1.875rem; } }
+    .cursos_card_wrapper_paragraph_ticket {
+      font-size: 0.9375rem;
+      padding-top: 0.1875rem;
+      padding-bottom: 0.1875rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_paragraph_ticket {
+          font-size: 1.875rem; } }
+    .cursos_card_wrapper_paragraph_equipo {
+      font-size: 0.9375rem;
+      padding-top: 0.1875rem;
+      padding-bottom: 0.1875rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_paragraph_equipo {
+          font-size: 1.875rem; } }
+    .cursos_card_wrapper_paragraph_instruccion {
+      font-size: 0.9375rem;
+      padding-top: 0.1875rem;
+      padding-bottom: 0.1875rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_paragraph_instruccion {
+          font-size: 1.875rem; } }
+    .cursos_card_wrapper_paragraph_material {
+      font-size: 0.9375rem;
+      padding-top: 0.1875rem;
+      padding-bottom: 0.1875rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_paragraph_material {
+          font-size: 1.875rem; } }
+    .cursos_card_wrapper_cta {
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+      background-color: #ff2b43;
+      padding: 0.3125rem;
+      border-radius: 0.3125rem; }
+      @media (min-width: 992px) {
+        .cursos_card_wrapper_cta {
+          padding: 0.625rem;
+          background-color: #ff2b43;
+          border-radius: 2.8125rem;
+          margin-bottom: 1.5625rem; }
+          .cursos_card_wrapper_cta:hover {
+            background-color: white; } }
+      .cursos_card_wrapper_cta a {
+        padding: 0.3125rem;
+        border-radius: 0.1875rem;
+        color: white; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_cta a {
+            font-weight: 500;
+            color: white; }
+            .cursos_card_wrapper_cta a:hover {
+              color: #ff2b43; } }
+  .cursos_card_imagen_uno {
+    display: block; }
+    @media (min-width: 992px) {
+      .cursos_card_imagen_uno {
+        display: none; } }
+  .cursos_card_imagen_uno_deskop {
+    display: none; }
+    @media (min-width: 992px) {
+      .cursos_card_imagen_uno_deskop {
+        display: block;
+        grid-area: imagen; } }
+  .cursos_card_etapas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column; }
+    @media (min-width: 992px) {
+      .cursos_card_etapas {
+        grid-area: etapas;
+        display: grid;
+        grid-template-areas: "imagen_one uno" "dos imagen_dos" "imagen_tres tres";
+        gap: 3.75rem; } }
+    .cursos_card_etapas_uno {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_uno {
+          width: 100%;
+          grid-area: uno;
+          margin-right: 3.75rem; } }
+      .cursos_card_etapas_uno_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_etapas_uno_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }
+      .cursos_card_etapas_uno_img {
+        display: none; }
+    .cursos_card_etapas_img {
+      display: none; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_img {
+          grid-area: imagen_one;
+          display: block; } }
+    .cursos_card_etapas_dos {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_dos {
+          grid-area: dos; } }
+      .cursos_card_etapas_dos_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_etapas_dos_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }
+    .cursos_card_etapas_img_dos {
+      display: none; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_img_dos {
+          grid-area: imagen_dos;
+          display: block; } }
+    .cursos_card_etapas_tres {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_tres {
+          grid-area: tres; } }
+      .cursos_card_etapas_tres_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_etapas_tres_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }
+    .cursos_card_etapas_img_tres {
+      display: none; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas_img_tres {
+          grid-area: imagen_tres;
+          display: block; } }
+  .cursos_card_niveles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column; }
+    @media (min-width: 992px) {
+      .cursos_card_niveles {
+        grid-area: niveles;
+        display: grid;
+        grid-template-areas: "tres cinco ocho"; } }
+    .cursos_card_niveles_tres {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem;
+      grid-area: tres; }
+      .cursos_card_niveles_tres_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_niveles_tres_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }
+    .cursos_card_niveles_cinco {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem;
+      grid-area: cinco; }
+      .cursos_card_niveles_cinco_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_niveles_cinco_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }
+    .cursos_card_niveles_ocho {
+      background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
+      margin-bottom: 1.5625rem;
+      width: 90%;
+      border-radius: 0.9375rem;
+      padding-bottom: 0.9375rem;
+      grid-area: ocho; }
+      .cursos_card_niveles_ocho_title {
+        margin-top: 0.9375rem;
+        font-size: 1.875rem;
+        text-align: center;
+        background-color: rgba(255, 43, 68, 0.534); }
+      .cursos_card_niveles_ocho_paragraph {
+        font-size: 0.9375rem;
+        margin: 0.9375rem; }

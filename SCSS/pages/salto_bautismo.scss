@@ -53,20 +53,17 @@
         }
 
         &_wrapper {
-            @include flex(none, none, space-around, none);
+            @include flex(center, center, space-around, center);
             flex-direction: column;
-            background-image: url("../Imagenes/logo_fondo.gif");
+            background-image: url("../Imagenes/promocionesfondo.png");
+            @include parallax;
+            padding-bottom: toRem(20);
 
 
             @media (min-width:992px) {
                 background-image: url("../Imagenes/fondo.png");
                 @include parallax;
                 display: grid;
-                grid-template-areas:
-                    "paragraph_uno paragraph_uno"
-                    "parrafo imagenes"
-                    "parrafo imagenes"
-                    ". butom";
                 align-items: space-around;
                 justify-content: center;
                 justify-items: center;
@@ -79,18 +76,17 @@
                 flex-direction: column;
                 width: 100%;
 
-                @media (min-width:992px) {
-                    grid-area: "paragraph_uno";
 
-                }
 
                 &_paragraph {
+                    color: white;
                     font-size: toRem(28);
                     font-weight: 500;
                     text-align: center;
                     padding-top: toRem(20);
 
                     @media (min-width:992px) {
+                        color: black;
                         font-size: toRem(70);
                         font-weight: bold;
                         padding-top: toRem(30);
@@ -99,12 +95,14 @@
                 }
 
                 &_paragraph_dos {
+                    color: white;
                     font-size: toRem(25);
                     font-weight: 500;
                     text-align: center;
                     padding-top: toRem(10);
 
                     @media (min-width:992px) {
+                        color: black;
                         font-size: toRem(30);
                         font-weight: 300;
                         padding-top: toRem(20);
@@ -118,8 +116,6 @@
 
                 @media (min-width:992px) {
                     display: block;
-                    grid-area: "imagenes";
-
                 }
 
 
@@ -128,7 +124,6 @@
 
                     @media (min-width:992px) {
                         display: block;
-                        grid-area: "imagenes_dos";
                         overflow: hidden;
                         padding-left: toRem(300);
 
@@ -139,7 +134,7 @@
 
                         @media (min-width:992px) {
                             display: none;
-                           
+
                         }
                     }
                 }
@@ -147,19 +142,179 @@
 
 
             &_descripcion {
-                
+                background-color: #0000004a;
+                border-radius: toRem(5);
+                margin: toRem(5);
+                padding-bottom: toRem(15);
+
                 @media (min-width:992px) {
+                    background-color: rgba(255, 255, 255, 0.201);
+                    border-radius: toRem(80);
                     grid-area: "texto";
                     font-size: toRem(20);
                     font-weight: 500;
                     width: 70%;
                     padding-top: toRem(70);
                     padding-left: toRem(50);
+                    padding-right: toRem(50);
+                }
+
+                p {
+                    color: white;
+                    margin-left: toRem(10);
+                    margin-top: toRem(10);
+
+                    @media (min-width:992px) {
+                        color: black;
+                        margin-top: toRem(5)
+                    }
+                }
+            }
+
+            &_cta {
+                background-color: rgb(255, 43, 67);
+                padding: toRem(5);
+                border-radius: toRem(2);
+
+                @media (min-width:992px) {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    padding: toRem(10);
+                    background-color: rgb(255, 43, 67);
+                    border-radius: toRem(45);
+                    margin-bottom: toRem(25);
+
+
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+
+                a {
+                    padding: toRem(5);
+                    border-radius: toRem(3);
+                    color: white;
+
+                    @media (min-width:992px) {
+                        font-weight: 500;
+                        color: white;
+
+                        &:hover {
+
+                            color: rgb(255, 43, 67);
+                        }
+                    }
+                }
+            }
+        }
+
+        &_videos {
+            padding-top: toRem(30);
+                padding-bottom: toRem(30);
+            @include flex(space-evenly, center, none, center);
+            flex-direction: column;
+
+            @media (min-width:992px) {
+                @include flex(space-evenly, center, center, center);
+                flex-direction: row;
+            }
+
+            iframe{
+                padding-top: toRem(10);
+            }
+        }
+
+            &_recomendaciones {
+                @include flex(center, center, center, center);
+                flex-direction: column;
+                background-image: url("../Imagenes/fondo_recomendaciones.gif");
+                @include parallax;
+
+                @media (min-width:992px) {
+                    padding-top: toRem(25);
+                    padding-bottom: toRem(35);
+                    display: grid;
+                    grid-template-areas:
+                        "title title title"
+                        "fisicas imagen indumentaria";
+
+                }
+
+
+                &_title {
+                    font-size: toRem(50);
+                    text-align: center;
+
+                    @media (min-width:992px) {
+                        grid-area: title;
+                        font-size: toRem(50);
+                        font-weight: bold;
+                        text-align: center;
+                        padding-bottom: toRem(20);
+                    }
+                }
+
+                &_fisicas {
+                    background-color: #ffffff4a;
+                    padding: toRem(20);
+                   
+
+                    @media (min-width:992px) {
+                        grid-area: fisicas;
+                        background-color: #ffffff4a;
+                        border-radius: toRem(25);
+                        margin-left: toRem(40);
+                        padding-bottom: toRem(20);
+                    }
+
+                    &_title {
+                        @media (min-width:992) {
+                            padding-left: toRem(30);
+                            padding-top: toRem(20);
+                        }
+                    }
+
+                    p {
+                        @media (min-width:992) {
+                            padding-left: toRem(30);
+                        }
+                    }
+                }
+
+                &_indumentaria {
+                    background-color: #ffffff4a;
+                    padding: toRem(20);
+                    @media (min-width:992px) {
+                        grid-area: indumentaria;
+                        border-radius: toRem(25);
+                        margin-right: toRem(40);
+                        padding-bottom: toRem(20);
+                    }
+
+                    &_title {
+                        @media (min-width:992px) {
+                            padding-left: toRem(30);
+                            padding-top: toRem(20);
+                        }
+                    }
+
+                    p {
+                        @media (min-width:992px) {
+                            padding-left: toRem(30);
+                        }
+                    }
+                }
+
+                &_img_rec {
+                    @media (min-width:992px) {
+                        grid-area: imagen;
+                    }
+                
                 }
             }
         }
     }
-}
-                
 
-                       
+            
+        
+    

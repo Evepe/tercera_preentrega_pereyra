@@ -1,8 +1,17 @@
+ul { 
+    li {
+       list-style-type: none;
+   }
+}
+
+a{
+   text-decoration: none;
+}
+
 .main_header {
     @include flex (center, none, none, center);
     width: 100vw;
     background-color: rgb(240, 248, 255);
-    z-index: 0;
     display: flex;
     width: 100vw;
     
@@ -16,6 +25,7 @@
             padding-left: 20px;
 
             a {
+                color: black;
                 font-size: 1em;
                 font-weight: 500;
 
@@ -38,7 +48,8 @@
         justify-content: space-around;
         align-items: center;
         background-color: rgb(240, 248, 255);
-        z-index: 1;
+        z-index: 4;
+        
 
         &_nav {
             display: grid;
@@ -46,13 +57,20 @@
             justify-content: end;
             gap: 0 20px;
             text-align: center;
+            z-index: 4;
 
             a {
+                color: black;
+
                 &:hover {
                     background-color: black;
                     border-radius: 15px;
                     color: white;
                     padding: 5px 5px;
+                }
+
+                &:active{
+                    color: red;
                 }
             }
         }
