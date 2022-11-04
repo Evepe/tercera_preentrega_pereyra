@@ -34,6 +34,10 @@
             font-size: toRem(60);
             margin-top: toRem(30);
 
+            @media (min-width:776px) {
+                font-size: toRem(150);
+            }
+
             @media (min-width:992px) {
                 font-size: toRem(250);
                 font-weight: bold;
@@ -51,6 +55,11 @@
             font-size: toRem(20);
             font-weight: 300;
             padding: toRem(15);
+
+            @media (min-width:776px) {
+                font-size: toRem(30);
+                padding: toRem(30);
+            }
 
             @media (min-width:992px) {
                 width: 70%;

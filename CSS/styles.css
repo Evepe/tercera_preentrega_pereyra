@@ -1060,6 +1060,9 @@ a {
   .cursos_main_principal_title {
     font-size: 3.75rem;
     margin-top: 1.875rem; }
+    @media (min-width: 776px) {
+      .cursos_main_principal_title {
+        font-size: 9.375rem; } }
     @media (min-width: 992px) {
       .cursos_main_principal_title {
         font-size: 15.625rem;
@@ -1075,6 +1078,10 @@ a {
     font-size: 1.25rem;
     font-weight: 300;
     padding: 0.9375rem; }
+    @media (min-width: 776px) {
+      .cursos_main_principal_paragraph {
+        font-size: 1.875rem;
+        padding: 1.875rem; } }
     @media (min-width: 992px) {
       .cursos_main_principal_paragraph {
         width: 70%;
