@@ -580,6 +580,11 @@ a {
     padding-left: 15px;
     position: relative;
     margin-top: 70px; }
+    @media (min-width: 767px) {
+      .promociones_main_principal_title {
+        color: #000;
+        font-size: 4.375rem;
+        margin-bottom: 9.375rem; } }
     @media (min-width: 992px) {
       .promociones_main_principal_title {
         color: #000;
@@ -595,6 +600,11 @@ a {
     margin-top: 0%;
     margin-bottom: 0%;
     padding-left: 15px; }
+    @media (min-width: 767px) {
+      .promociones_main_principal_paragraph {
+        color: #000;
+        font-size: 2.5rem;
+        margin-bottom: 6.25rem; } }
     @media (min-width: 992px) {
       .promociones_main_principal_paragraph {
         color: #000;
@@ -723,6 +733,7 @@ a {
     justify-items: center;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #00000079;
     border-radius: 1.25rem;
     padding: 1.875rem 1.25rem;

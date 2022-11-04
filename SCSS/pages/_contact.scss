@@ -116,6 +116,7 @@
 
         &_ubicacion {
             @include flex (center, center, center, center);
+            flex-direction: column;
             background-color: #00000079;
             border-radius: toRem(20);
             padding: toRem(30) toRem(20);

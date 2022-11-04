@@ -21,6 +21,13 @@
         position: relative;
         margin-top: 70px;
 
+        @media (min-width: 767px) {
+            color: map-get($map: $palette, $key:"dark" );
+            font-size: toRem(70);
+            margin-bottom: toRem(150);;
+            
+        }
+
         @media (min-width:992px) {
             color: map-get($map: $palette, $key:"dark" );
             font-size: 7em;
@@ -38,6 +45,13 @@
         margin-top: 0%;
         margin-bottom: 0%;
         padding-left: 15px;
+
+        @media (min-width:767px) {
+            color: map-get($map: $palette, $key:"dark" );
+            font-size: toRem(40);
+            margin-bottom: toRem(100);
+            
+        }
 
         @media (min-width:992px) {
             color: map-get($map: $palette, $key:"dark" );
