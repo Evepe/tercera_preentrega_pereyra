@@ -47,7 +47,7 @@
         }
 
         &_paragraph {
-            background-color: rgba(255, 255, 255, 0.279);
+            background-color: map-get($map: $palette, $key:"light_gradient" );
             font-size: toRem(20);
             font-weight: 300;
             padding: toRem(15);
@@ -87,7 +87,7 @@
         &_wrapper {
             @include flex (center, center, center, center);
             flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.397);
+            background-color: map-get($map: $palette, $key:"light_gradient" );
             margin-top: toRem(25);
             width: 90%;
             border-radius: toRem(15);
@@ -101,7 +101,7 @@
                 margin-top: toRem(15);
                 font-size: toRem(30);
                 text-align: center;
-                background-color: rgba(255, 43, 68, 0.534);
+                background-color:map-get($map: $palette, $key:"red_gradient" );
 
                 @media (min-width:992px) {
                     font-size: toRem(60);
@@ -181,37 +181,13 @@
             &_cta {
                 margin-top: toRem(10);
                 margin-bottom: toRem(10);
-                background-color: rgb(255, 43, 67);
+               @extend %cta;
                 padding: toRem(5);
-                border-radius: toRem(5);
+               
 
                 @media (min-width:992px) {
                     padding: toRem(10);
-                    background-color: rgb(255, 43, 67);
-                    border-radius: toRem(45);
                     margin-bottom: toRem(25);
-
-
-                    &:hover {
-                        background-color: white;
-                    }
-                }
-
-                a {
-                    padding: toRem(5);
-                    border-radius: toRem(3);
-                    color: white;
-
-                    @media (min-width:992px) {
-                        font-weight: 500;
-                        color: white;
-
-                        &:hover {
-
-                            color: rgb(255, 43, 67);
-                        }
-                    }
-
                 }
             }
         }
@@ -251,8 +227,7 @@
 
 
             &_uno {
-                background-color: rgba(255, 255, 255, 0.397);
-                margin-top: toRem(25);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 width: 90%;
                 border-radius: toRem(15);
                 padding-bottom: toRem(15);
@@ -267,7 +242,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {
@@ -291,7 +266,7 @@
             }
 
             &_dos {
-                background-color: rgba(255, 255, 255, 0.397);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 margin-top: toRem(25);
                 width: 90%;
                 border-radius: toRem(15);
@@ -305,7 +280,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {
@@ -327,7 +302,7 @@
             
 
             &_tres {
-                background-color: rgba(255, 255, 255, 0.397);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 margin-top: toRem(25);
                 width: 90%;
                 border-radius: toRem(15);
@@ -340,7 +315,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {
@@ -372,7 +347,7 @@
             }
 
             &_tres {
-                background-color: rgba(255, 255, 255, 0.397);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 margin-top: toRem(25);
                 width: 90%;
                 border-radius: toRem(15);
@@ -383,7 +358,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {
@@ -394,7 +369,7 @@
             }
 
             &_cinco {
-                background-color: rgba(255, 255, 255, 0.397);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 margin-top: toRem(25);
                 width: 90%;
                 border-radius: toRem(15);
@@ -405,7 +380,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {
@@ -416,7 +391,7 @@
             }
 
             &_ocho {
-                background-color: rgba(255, 255, 255, 0.397);
+                background-color: map-get($map: $palette, $key:"light_gradient" );
                 margin-top: toRem(25);
                 margin-bottom: toRem(25);
                 width: 90%;
@@ -428,7 +403,7 @@
                     margin-top: toRem(15);
                     font-size: toRem(30);
                     text-align: center;
-                    background-color: rgba(255, 43, 68, 0.534);
+                    background-color:map-get($map: $palette, $key:"red_gradient" );
                 }
 
                 &_paragraph {

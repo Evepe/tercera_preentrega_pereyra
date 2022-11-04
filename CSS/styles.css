@@ -1,3 +1,29 @@
+@use "variables.scss";
+.main_principal_wrapper-cta_salto, .main_principal_wrapper-cta_curso, .main_principal .salto_wrapper_paragraph_cta, .main_principal .curso_wrapper_cta, .contact_main_principal_content_escribinos .buton, .Saltos_main_principal_wrapper_cta, .cursos_card_wrapper_cta {
+  padding: 0.3125rem;
+  border-radius: 2.8125rem; }
+  @media (min-width: 767px) {
+    .main_principal_wrapper-cta_salto, .main_principal_wrapper-cta_curso, .main_principal .salto_wrapper_paragraph_cta, .main_principal .curso_wrapper_cta, .contact_main_principal_content_escribinos .buton, .Saltos_main_principal_wrapper_cta, .cursos_card_wrapper_cta {
+      padding: 0.625rem;
+      background-color: #ff2b43;
+      border: 2.8125rem;
+      transition: 0.5s ease-in-out; }
+      .main_principal_wrapper-cta_salto:hover, .main_principal_wrapper-cta_curso:hover, .main_principal .salto_wrapper_paragraph_cta:hover, .main_principal .curso_wrapper_cta:hover, .contact_main_principal_content_escribinos .buton:hover, .Saltos_main_principal_wrapper_cta:hover, .cursos_card_wrapper_cta:hover {
+        background-color: white; } }
+  .main_principal_wrapper-cta_salto a, .main_principal_wrapper-cta_curso a, .main_principal .salto_wrapper_paragraph_cta a, .main_principal .curso_wrapper_cta a, .contact_main_principal_content_escribinos .buton a, .Saltos_main_principal_wrapper_cta a, .cursos_card_wrapper_cta a {
+    padding: 0.3125rem;
+    border-radius: 1.875rem;
+    color: white;
+    background-color: #ff2b43; }
+    @media (min-width: 767px) {
+      .main_principal_wrapper-cta_salto a, .main_principal_wrapper-cta_curso a, .main_principal .salto_wrapper_paragraph_cta a, .main_principal .curso_wrapper_cta a, .contact_main_principal_content_escribinos .buton a, .Saltos_main_principal_wrapper_cta a, .cursos_card_wrapper_cta a {
+        font-size: 1.125rem;
+        background-color: rgba(255, 255, 255, 0);
+        font-weight: 500;
+        color: white; }
+        .main_principal_wrapper-cta_salto a:hover, .main_principal_wrapper-cta_curso a:hover, .main_principal .salto_wrapper_paragraph_cta a:hover, .main_principal .curso_wrapper_cta a:hover, .contact_main_principal_content_escribinos .buton a:hover, .Saltos_main_principal_wrapper_cta a:hover, .cursos_card_wrapper_cta a:hover {
+          color: #ff2b43; } }
+
 html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; }
 
@@ -136,13 +162,16 @@ a {
   align-content: space-around;
   align-items: none;
   height: 100vh; }
-  @media (min-width: 992px) {
+  @media (min-width: 767px) {
     .main_principal_parallax {
-      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png");
+      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/backgraund_index_tablet.gif");
       background-attachment: fixed;
       flex-direction: column;
       justify-items: flex-start;
       align-content: flex-start; } }
+  @media (min-width: 992px) {
+    .main_principal_parallax {
+      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png"); } }
 
 .main_principal_textbackground {
   color: rgba(0, 0, 0, 0.238);
@@ -152,52 +181,58 @@ a {
   bottom: -10.625rem;
   font-weight: bolder;
   z-index: 5; }
+  @media (min-width: 767px) {
+    .main_principal_textbackground {
+      font-size: 9.375rem;
+      margin-bottom: 8.4375rem; } }
   @media (min-width: 992px) {
     .main_principal_textbackground {
-      font-size: 14.375rem; } }
+      font-size: 14.375rem;
+      margin-bottom: 2.5625rem; } }
 
 .main_principal_wrapper {
   padding-left: 3%;
   padding-bottom: 19.9375rem; }
-  @media (min-width: 992px) {
+  @media (min-width: 767px) {
     .main_principal_wrapper {
       padding-bottom: 0; } }
   .main_principal_wrapper h1 {
-    color: white;
+    color: #ffffff;
     font-size: 0.8em; }
-    @media (min-width: 992px) {
+    @media (min-width: 767px) {
       .main_principal_wrapper h1 {
         font-size: 1.875rem; } }
   .main_principal_wrapper_paragrap {
-    font: bold;
-    color: white;
+    font-weight: bold;
+    color: #ffffff;
     font-size: 2.3em;
     width: 80%; }
     @media (min-width: 992px) {
       .main_principal_wrapper_paragrap {
         font-size: 5rem; } }
-  .main_principal_wrapper-cta a {
-    font-size: 0.625rem;
-    padding: 0.625rem;
-    font-weight: 500;
-    text-align: center;
-    color: white;
-    background-color: #ff2b43;
-    border-radius: 2.8125rem; }
-  @media (min-width: 992px) {
-    .main_principal_wrapper-cta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      justify-items: none;
-      align-content: none;
-      align-items: none; }
-      .main_principal_wrapper-cta a {
-        font-size: 0.8125rem;
-        padding: 0.625rem 1.25rem; }
-        .main_principal_wrapper-cta a_:hover {
-          color: black;
-          background-color: #ff0825; } }
+  .main_principal_wrapper-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.3125rem; }
+    @media (min-width: 992px) {
+      .main_principal_wrapper-cta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: none;
+        align-content: none;
+        align-items: none; } }
+    .main_principal_wrapper-cta_salto {
+      font-size: 0.625rem;
+      font-weight: 500; }
+    .main_principal_wrapper-cta_curso {
+      font-size: 0.625rem;
+      font-weight: 500; }
 
 .main_principal .nosotros {
   display: flex;
@@ -213,7 +248,7 @@ a {
       margin-bottom: 25px; } }
   .main_principal .nosotros_title {
     font-size: 3.125rem;
-    color: rgba(21, 16, 111, 0.499);
+    color: #15106f7f;
     text-align: center;
     padding-top: 0.9375rem; }
     @media (min-width: 992px) {
@@ -241,7 +276,7 @@ a {
   .main_principal .nosotros_subtitle_escuela {
     font-size: 2.1875rem;
     font-weight: 300;
-    color: rgba(21, 16, 111, 0.499);
+    color: #15106f7f;
     padding-left: 1.28125rem; }
     @media (min-width: 992px) {
       .main_principal .nosotros_subtitle_escuela {
@@ -287,7 +322,7 @@ a {
   .main_principal .nosotros_subtitle_instalaciones {
     font-size: 2.1875rem;
     font-weight: 300;
-    color: rgba(21, 16, 111, 0.499);
+    color: #15106f7f;
     padding-left: 1.28125rem; }
     @media (min-width: 992px) {
       .main_principal .nosotros_subtitle_instalaciones {
@@ -345,17 +380,20 @@ a {
     color: rgba(255, 255, 255, 0.586);
     text-align: center;
     padding-top: 0.9375rem; }
+    @media (min-width: 767px) {
+      .main_principal .salto_parallax_title {
+        font-size: 6.25rem; } }
     @media (min-width: 992px) {
       .main_principal .salto_parallax_title {
         font-size: 6rem;
-        color: rgba(255, 255, 255, 0.589);
+        color: rgba(255, 255, 255, 0.586);
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 4; } }
 
 .main_principal .salto_wrapper_paragraph {
-  padding: 0.9375rem 1.5625rem 1.25rem;
+  padding: 0.9375rem 1.5625rem 2.5rem;
   font-size: 0.9375rem;
   text-align: justify; }
   @media (min-width: 992px) {
@@ -385,32 +423,13 @@ a {
     justify-content: none;
     justify-items: none;
     align-content: none;
-    align-items: flex-start;
-    flex-direction: row;
-    padding-top: 0.625rem; }
-    @media (min-width: 992px) {
+    align-items: flex-start; }
+    @media (min-width: 767px) {
       .main_principal .salto_wrapper_paragraph_cta {
+        margin-top: 1.875rem;
         text-decoration: none;
         grid-area: buttom;
-        display: flex; } }
-    .main_principal .salto_wrapper_paragraph_cta a {
-      font-size: 0.625rem;
-      padding: 0.625rem;
-      font-weight: 500;
-      text-align: center;
-      color: white;
-      background-color: #ff2b43;
-      border-radius: 2.8125rem; }
-      @media (min-width: 992px) {
-        .main_principal .salto_wrapper_paragraph_cta a {
-          font-size: 13px;
-          padding-top: 13px;
-          height: 30px;
-          margin-left: 70px;
-          margin-top: 25px; }
-          .main_principal .salto_wrapper_paragraph_cta a_:hover {
-            color: #ff2b43;
-            background-color: white; } }
+        display: inline-block; } }
 
 .main_principal .curso {
   display: flex;
@@ -449,13 +468,16 @@ a {
         grid-area: presentacion; } }
     .main_principal .curso_parallax_title {
       font-size: 3.125rem;
-      color: rgba(255, 255, 255, 0.499);
+      color: rgba(255, 255, 255, 0.586);
       text-align: center;
       padding-top: 0.9375rem; }
+      @media (min-width: 767px) {
+        .main_principal .curso_parallax_title {
+          font-size: 6.25rem; } }
       @media (min-width: 992px) {
         .main_principal .curso_parallax_title {
           font-size: 6em;
-          color: rgba(255, 255, 255, 0.541);
+          color: rgba(255, 255, 255, 0.586);
           grid-column-start: 2;
           grid-column-end: 3;
           grid-row-start: 2;
@@ -479,31 +501,13 @@ a {
       justify-items: none;
       align-content: none;
       align-items: flex-start;
-      flex-direction: row;
-      padding-top: 0.625rem; }
-      @media (min-width: 992px) {
+      flex-direction: row; }
+      @media (min-width: 767px) {
         .main_principal .curso_wrapper_cta {
           text-decoration: none;
           grid-area: boton;
-          display: flex; } }
-      .main_principal .curso_wrapper_cta a {
-        font-size: 0.625rem;
-        padding: 0.625rem;
-        font-weight: 500;
-        text-align: center;
-        color: white;
-        background-color: #ff2b43;
-        border-radius: 2.8125rem; }
-        @media (min-width: 992px) {
-          .main_principal .curso_wrapper_cta a {
-            font-size: 13px;
-            padding-top: 13px;
-            height: 30px;
-            margin-left: 70px;
-            margin-top: 25px; }
-            .main_principal .curso_wrapper_cta a_:hover {
-              color: #ff2b43;
-              background-color: white; } }
+          display: inline-block;
+          margin-top: 1.875rem; } }
 
 .main_principal .videos {
   display: flex;
@@ -513,11 +517,17 @@ a {
   align-content: none;
   align-items: center;
   flex-direction: column; }
+  @media (min-width: 767px) {
+    .main_principal .videos {
+      background-image: url("../Imagenes/fondo.png");
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
   @media (min-width: 992px) {
     .main_principal .videos {
       justify-content: space-around;
-      gap: 20px;
-      background-image: url("../Imagenes/logo_fondo.gif"); } }
+      gap: 20px; } }
   .main_principal .videos h2 {
     font-size: 3.125rem;
     text-align: center;
@@ -525,7 +535,7 @@ a {
     padding-right: 0.625rem; }
     @media (min-width: 992px) {
       .main_principal .videos h2 {
-        color: rgba(21, 16, 111, 0.499);
+        color: #000;
         font-size: 4.375rem; } }
   .main_principal .videos_wrapper {
     display: flex;
@@ -536,7 +546,7 @@ a {
     align-items: center;
     flex-direction: column;
     padding: 0.625rem 0.9375rem; }
-    @media (min-width: 992px) {
+    @media (min-width: 767px) {
       .main_principal .videos_wrapper {
         flex-direction: row;
         padding: 0 10% 0 10%; } }
@@ -564,7 +574,7 @@ a {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr); } }
   .promociones_main_principal_title {
-    color: white;
+    color: #ffffff;
     font-size: 3em;
     font-weight: bold;
     padding-left: 15px;
@@ -572,14 +582,14 @@ a {
     margin-top: 70px; }
     @media (min-width: 992px) {
       .promociones_main_principal_title {
-        color: black;
+        color: #000;
         font-size: 7em;
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2; } }
   .promociones_main_principal_paragraph {
-    color: white;
+    color: #ffffff;
     font-size: 1.5em;
     width: 100%;
     margin-top: 0%;
@@ -587,7 +597,7 @@ a {
     padding-left: 15px; }
     @media (min-width: 992px) {
       .promociones_main_principal_paragraph {
-        color: black;
+        color: #000;
         font-size: 4em;
         grid-row-start: 2;
         grid-row-end: 4;
@@ -638,7 +648,7 @@ a {
       .contact_main_principal_parallax_text_background {
         font-size: 14.375rem; } }
   .contact_main_principal_parallax_title {
-    color: rgba(255, 255, 255, 0.903);
+    color: #ffffff;
     font-size: 3em;
     font-weight: bold;
     padding-left: 15px;
@@ -646,7 +656,7 @@ a {
     margin-top: 70px; }
     @media (min-width: 992px) {
       .contact_main_principal_parallax_title {
-        color: black;
+        color: #000;
         font-size: 7em;
         grid-row-start: 1;
         grid-row-end: 3;
@@ -683,20 +693,29 @@ a {
         margin: 1.25rem;
         grid-area: formulario; } }
     .contact_main_principal_content_escribinos_title {
-      color: white;
+      color: #ffffff;
       font-size: 1.75rem;
       font-weight: 500;
       text-align: center;
       padding-top: 1.25rem; }
       @media (min-width: 992px) {
         .contact_main_principal_content_escribinos_title {
-          color: black;
+          color: #000;
           font-size: 4.375rem;
           font-weight: bold;
           padding-top: 1.875rem;
           padding-left: 1.5625rem; } }
     .contact_main_principal_content_escribinos label {
-      color: white; }
+      color: #ffffff; }
+    .contact_main_principal_content_escribinos .buton {
+      color: #000; }
+      @media (min-width: 992px) {
+        .contact_main_principal_content_escribinos .buton {
+          color: #ffffff;
+          background-color: #ff2b43; }
+          .contact_main_principal_content_escribinos .buton:hover {
+            color: #ff2b43;
+            background-color: #ffffff; } }
   .contact_main_principal_content_ubicacion {
     display: flex;
     flex-wrap: wrap;
@@ -715,14 +734,14 @@ a {
         margin: 1.25rem;
         grid-area: mapa; } }
     .contact_main_principal_content_ubicacion_title {
-      color: white;
+      color: #ffffff;
       font-size: 1.75rem;
       font-weight: 500;
       text-align: center;
       padding-top: 1.25rem; }
       @media (min-width: 992px) {
         .contact_main_principal_content_ubicacion_title {
-          color: black;
+          color: #000;
           font-size: 4.375rem;
           font-weight: bold;
           padding-top: 1.875rem;
@@ -738,11 +757,11 @@ a {
         .contact_main_principal_content_ubicacion_maps_direccion_google_mobile {
           display: none; } }
     .contact_main_principal_content_ubicacion_horarios_atencion {
-      background-color: rgba(255, 255, 255, 0.348);
+      background-color: rgba(255, 255, 255, 0.397);
       border-bottom: 1.5625rem; }
       @media (min-width: 992px) {
         .contact_main_principal_content_ubicacion_horarios_atencion {
-          background-color: rgba(255, 255, 255, 0.325);
+          background-color: rgba(255, 255, 255, 0.397);
           border-bottom: 1.5625rem;
           padding: 1.5625rem;
           grid-area: horarios; } }
@@ -769,7 +788,7 @@ a {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr); } }
   .Saltos_main_principal_parallax_title {
-    color: white;
+    color: #ffffff;
     font-size: 3em;
     font-weight: bold;
     padding-left: 15px;
@@ -777,7 +796,7 @@ a {
     margin-top: 70px; }
     @media (min-width: 992px) {
       .Saltos_main_principal_parallax_title {
-        color: black;
+        color: #000;
         font-size: 7em;
         grid-row-start: 1;
         grid-row-end: 3;
@@ -791,7 +810,7 @@ a {
     padding-left: 15px; }
     @media (min-width: 992px) {
       .Saltos_main_principal_parallax_subtitle {
-        color: black;
+        color: #000;
         font-size: 4em;
         grid-row-start: 3;
         grid-row-end: 4;
@@ -834,27 +853,27 @@ a {
     flex-direction: column;
     width: 100%; }
     .Saltos_main_principal_wrapper_cont_paragraph {
-      color: white;
+      color: #ffffff;
       font-size: 1.75rem;
       font-weight: 500;
       text-align: center;
       padding-top: 1.25rem; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_cont_paragraph {
-          color: black;
+          color: #000;
           font-size: 4.375rem;
           font-weight: bold;
           padding-top: 1.875rem;
           padding-left: 1.5625rem; } }
     .Saltos_main_principal_wrapper_cont_paragraph_dos {
-      color: white;
+      color: #ffffff;
       font-size: 1.5625rem;
       font-weight: 500;
       text-align: center;
       padding-top: 0.625rem; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_cont_paragraph_dos {
-          color: black;
+          color: #000;
           font-size: 1.875rem;
           font-weight: 300;
           padding-top: 1.25rem; } }
@@ -882,7 +901,7 @@ a {
     padding-bottom: 0.9375rem; }
     @media (min-width: 992px) {
       .Saltos_main_principal_wrapper_descripcion {
-        background-color: rgba(255, 255, 255, 0.201);
+        background-color: rgba(255, 255, 255, 0.397);
         border-radius: 5rem;
         grid-area: "texto";
         font-size: 1.25rem;
@@ -892,37 +911,20 @@ a {
         padding-left: 3.125rem;
         padding-right: 3.125rem; } }
     .Saltos_main_principal_wrapper_descripcion p {
-      color: white;
+      color: #ffffff;
       margin-left: 0.625rem;
       margin-top: 0.625rem; }
       @media (min-width: 992px) {
         .Saltos_main_principal_wrapper_descripcion p {
-          color: black;
+          color: #000;
           margin-top: 0.3125rem; } }
   .Saltos_main_principal_wrapper_cta {
-    background-color: #ff2b43;
-    padding: 0.3125rem;
-    border-radius: 0.125rem; }
+    padding: 0.3125rem; }
     @media (min-width: 992px) {
       .Saltos_main_principal_wrapper_cta {
         grid-column-start: 2;
         grid-column-end: 3;
-        padding: 0.625rem;
-        background-color: #ff2b43;
-        border-radius: 2.8125rem;
-        margin-bottom: 1.5625rem; }
-        .Saltos_main_principal_wrapper_cta:hover {
-          background-color: white; } }
-    .Saltos_main_principal_wrapper_cta a {
-      padding: 0.3125rem;
-      border-radius: 0.1875rem;
-      color: white; }
-      @media (min-width: 992px) {
-        .Saltos_main_principal_wrapper_cta a {
-          font-weight: 500;
-          color: white; }
-          .Saltos_main_principal_wrapper_cta a:hover {
-            color: #ff2b43; } }
+        padding: 0.625rem; } }
 
 .Saltos_main_principal_videos {
   padding-top: 1.875rem;
@@ -976,12 +978,12 @@ a {
         text-align: center;
         padding-bottom: 1.25rem; } }
   .Saltos_main_principal_recomendaciones_fisicas {
-    background-color: #ffffff4a;
+    background-color: rgba(255, 255, 255, 0.397);
     padding: 1.25rem; }
     @media (min-width: 992px) {
       .Saltos_main_principal_recomendaciones_fisicas {
         grid-area: fisicas;
-        background-color: #ffffff4a;
+        background-color: rgba(255, 255, 255, 0.397);
         border-radius: 1.5625rem;
         margin-left: 2.5rem;
         padding-bottom: 1.25rem; } }
@@ -993,7 +995,7 @@ a {
       .Saltos_main_principal_recomendaciones_fisicas p {
         padding-left: 1.875rem; } }
   .Saltos_main_principal_recomendaciones_indumentaria {
-    background-color: #ffffff4a;
+    background-color: rgba(255, 255, 255, 0.397);
     padding: 1.25rem; }
     @media (min-width: 992px) {
       .Saltos_main_principal_recomendaciones_indumentaria {
@@ -1058,7 +1060,7 @@ a {
         grid-row-end: 3;
         z-index: 2; } }
   .cursos_main_principal_paragraph {
-    background-color: rgba(255, 255, 255, 0.279);
+    background-color: rgba(255, 255, 255, 0.397);
     font-size: 1.25rem;
     font-weight: 300;
     padding: 0.9375rem; }
@@ -1167,27 +1169,11 @@ a {
     .cursos_card_wrapper_cta {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
-      background-color: #ff2b43;
-      padding: 0.3125rem;
-      border-radius: 0.3125rem; }
+      padding: 0.3125rem; }
       @media (min-width: 992px) {
         .cursos_card_wrapper_cta {
           padding: 0.625rem;
-          background-color: #ff2b43;
-          border-radius: 2.8125rem;
-          margin-bottom: 1.5625rem; }
-          .cursos_card_wrapper_cta:hover {
-            background-color: white; } }
-      .cursos_card_wrapper_cta a {
-        padding: 0.3125rem;
-        border-radius: 0.1875rem;
-        color: white; }
-        @media (min-width: 992px) {
-          .cursos_card_wrapper_cta a {
-            font-weight: 500;
-            color: white; }
-            .cursos_card_wrapper_cta a:hover {
-              color: #ff2b43; } }
+          margin-bottom: 1.5625rem; } }
   .cursos_card_imagen_uno {
     display: block; }
     @media (min-width: 992px) {
@@ -1215,7 +1201,6 @@ a {
         gap: 3.75rem; } }
     .cursos_card_etapas_uno {
       background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
       width: 90%;
       border-radius: 0.9375rem;
       padding-bottom: 0.9375rem; }

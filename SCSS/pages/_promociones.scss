@@ -1,3 +1,4 @@
+
 .promociones_main_principal {
     background-image: url("../Imagenes/promociones_background_mobile.png");
     background-attachment: fixed;
@@ -13,7 +14,7 @@
     }
 
     &_title {
-        color: white;
+        color: map-get($map: $palette, $key:"light" );
         font-size: 3em;
         font-weight: bold;
         padding-left: 15px;
@@ -21,7 +22,7 @@
         margin-top: 70px;
 
         @media (min-width:992px) {
-            color: black;
+            color: map-get($map: $palette, $key:"dark" );
             font-size: 7em;
             grid-row-start: 1;
             grid-row-end: 3;
@@ -31,7 +32,7 @@
     }
 
     &_paragraph {
-        color: white;
+        color: map-get($map: $palette, $key:"light" );
         font-size: 1.5em;
         width: 100%;
         margin-top: 0%;
@@ -39,7 +40,7 @@
         padding-left: 15px;
 
         @media (min-width:992px) {
-            color: rgb(0, 0, 0);
+            color: map-get($map: $palette, $key:"dark" );
             font-size: 4em;
             grid-row-start: 2;
             grid-row-end: 4;

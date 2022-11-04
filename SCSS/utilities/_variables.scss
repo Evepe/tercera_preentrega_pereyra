@@ -1,1 +1,21 @@
 $coloruno:#1245;
+$background_button:rgb(255,43,67);
+$nocolor:rgba(255, 255, 255, 0);
+
+
+$palette: (
+    "background_button":#ff2b43,
+    "nocolor":#ffffff00,
+    "light": #ffffff,
+    "dark": #000,
+    "sucess":#15106f7f,
+    "lighten":rgba(255, 255, 255, 0.586),
+    "red_gradient":rgba(255, 43, 68, 0.534),
+    "light_gradient":rgba(255, 255, 255, 0.397),
+);
+
+
+$breackpoint: (
+    "tablet": min-width= 767px,
+    "desktop": min-width= 992px,
+);

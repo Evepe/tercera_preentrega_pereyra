@@ -1,18 +1,21 @@
 .main_principal {
-
-
+    
     &_parallax {
         background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/fondo_mobile.png");
         @include parallax;
         @include flex (center, none, space-around, none);
         height: 100vh;
 
-        @media (min-width:992px) {
-            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png");
+        @media (min-width:767px) {
+            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/backgraund_index_tablet.gif");
             background-attachment: fixed;
             flex-direction: column;
             justify-items: flex-start;
             align-content: flex-start;
+        }
+
+        @media (min-width:992px) {
+            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png"); 
         }
     }
 
@@ -24,9 +27,16 @@
         bottom: toRem(-170);
         font-weight: bolder;
         z-index: 5;
+         
+
+    @media (min-width:767px) {
+        font-size: toRem(150);
+       margin-bottom: toRem(135);
+    }
 
         @media (min-width:992px) {
             font-size: toRem(230);
+            margin-bottom: toRem(41);
         }
     }
 
@@ -34,53 +44,53 @@
         padding-left: 3%;
         padding-bottom: toRem(319);
 
-        @media (min-width:992px) {
+    
+        @media (min-width:767px) {
             padding-bottom: 0;
         }
 
         h1 {
-            color: rgb(255, 255, 255);
+            color: map-get($map: $palette, $key:"light");
             font-size: 0.8em;
 
-            @media (min-width:992px) {
+
+            @media (min-width:767px) {
                 font-size: toRem(30);
             }
         }
 
         &_paragrap {
-            font: bold;
-            color: rgb(255, 255, 255);
+            font-weight: bold;
+            color: map-get($map: $palette, $key:"light");
             font-size: 2.3em;
             width: 80%;
 
+            
             @media (min-width:992px) {
                 font-size: toRem(80);
             }
         }
 
         &-cta {
-            a {
-                font-size: toRem(10);
-                padding: toRem(10);
-                font-weight: 500;
-                text-align: center;
-                color: white;
-                background-color: rgb(255, 43, 67);
-                border-radius: toRem(45);
-            }
+            @include flex (flex-start, center, center, center);
+            flex-direction:row;
+            gap: toRem(5);
+
 
             @media (min-width:992px) {
                 @include flex (space-evenly, none, none, none);
+            }
 
-                a {
-                    font-size: toRem(13);
-                    padding: toRem(10) toRem(20);
+            &_salto{
+                @extend %cta;
+                font-size: toRem(10);
+                font-weight: 500;
+            }
 
-                    &_:hover {
-                        color: black;
-                        background-color: rgb(255, 8, 37);
-                    }
-                }
+            &_curso{
+                @extend %cta;
+                font-size: toRem(10);
+                font-weight: 500;
             }
         }
     }
@@ -96,9 +106,10 @@
 
         &_title {
             font-size: toRem(50);
-            color: rgba(21, 16, 111, 0.499);
+            color: map-get($map: $palette, $key:"sucess");
             text-align: center;
             padding-top: toRem(15);
+
 
             @media (min-width:992px) {
                 font-size: 70px;
@@ -125,7 +136,7 @@
         &_subtitle_escuela {
             font-size: toRem(35);
             font-weight: 300;
-            color: rgba(21, 16, 111, 0.499);
+            color: map-get($map: $palette, $key:"sucess");
             padding-left: toRem(20.5);
 
             @media (min-width:992px) {
@@ -178,7 +189,7 @@
         &_subtitle_instalaciones {
             font-size: toRem(35);
             font-weight: 300;
-            color: rgba(21, 16, 111, 0.499);
+            color: map-get($map: $palette, $key:"sucess");
             padding-left: toRem(20.5);
 
             @media (min-width:992px) {
@@ -240,13 +251,16 @@
 
             &_title {
                 font-size: toRem(50);
-                color: rgba(255, 255, 255, 0.586);
+                color: map-get($map: $palette, $key: "lighten");
                 text-align: center;
                 padding-top: toRem(15);
 
+                @media (min-width:767px) {
+                    font-size: toRem(100);
+                }
                 @media (min-width:992px) {
                     font-size: 6rem;
-                    color: rgba(255, 255, 255, 0.589);
+                    color: map-get($map: $palette, $key: "lighten");
                     grid-column-start: 2;
                     grid-column-end: 3;
                     grid-row-start: 2;
@@ -256,7 +270,7 @@
         }
 
         &_wrapper_paragraph {
-            padding: toRem(15) toRem(25) toRem(20);
+            padding: toRem(15) toRem(25) toRem(40);
             font-size: toRem(15);
             text-align: justify;
 
@@ -288,37 +302,13 @@
 
             &_cta {
                 @include flex(none, none, none, flex-start);
-                flex-direction: row;
-                padding-top: toRem(10);
+                @extend %cta;
 
-                @media (min-width:992px) {
+                @media (min-width:767px) {
+                    margin-top: toRem(30);
                     text-decoration: none;
                     grid-area: buttom;
-                    display: flex;
-                }
-
-                a {
-                    font-size: toRem(10);
-                    padding: toRem(10);
-                    font-weight: 500;
-                    text-align: center;
-                    color: white;
-                    background-color: rgb(255, 43, 67);
-                    border-radius: toRem(45);
-
-                    @media (min-width:992px) {
-                        font-size: 13px;
-                        padding-top: 13px;
-                        height: 30px;
-                        margin-left: 70px;
-                        margin-top: 25px;
-
-
-                        &_:hover {
-                            color: rgb(255, 43, 67);
-                            background-color: white;
-                        }
-                    }
+                    display: inline-block;
                 }
             }
 
@@ -356,13 +346,18 @@
 
             &_title {
                 font-size: toRem(50);
-                color: rgba(255, 255, 255, 0.499);
+                color: map-get($map: $palette, $key: "lighten");
                 text-align: center;
                 padding-top: toRem(15);
 
+                @media (min-width:767px) {
+                    font-size: toRem(100);
+                    
+                }
+
                 @media (min-width:992px) {
                     font-size: 6em;
-                    color: rgba(255, 255, 255, 0.541);
+                    color: map-get($map: $palette, $key: "lighten");
                     grid-column-start: 2;
                     grid-column-end: 3;
                     grid-row-start: 2;
@@ -389,35 +384,14 @@
             &_cta {
                 @include flex(none, none, none, flex-start);
                 flex-direction: row;
-                padding-top: toRem(10);
+        
+                @extend %cta;
 
-                @media (min-width:992px) {
+                @media (min-width:767px) {
                     text-decoration: none;
                     grid-area: boton;
-                    display: flex;
-                }
-
-                a {
-                    font-size: toRem(10);
-                    padding: toRem(10);
-                    font-weight: 500;
-                    text-align: center;
-                    color: white;
-                    background-color: rgb(255, 43, 67);
-                    border-radius: toRem(45);
-
-                    @media (min-width:992px) {
-                        font-size: 13px;
-                        padding-top: 13px;
-                        height: 30px;
-                        margin-left: 70px;
-                        margin-top: 25px;
-
-                        &_:hover {
-                            color: rgb(255, 43, 67);
-                            background-color: white;
-                        }
-                    }
+                    display: inline-block;
+                    margin-top: toRem(30);
                 }
             }
         }
@@ -428,10 +402,16 @@
         @include flex(space-evenly, center, none, center);
         flex-direction: column;
 
+        @media (min-width:767px) {
+            background-image: url("../Imagenes/fondo.png");
+            @include parallax;
+            
+        }
+
         @media (min-width:992px) {
             justify-content: space-around;
             gap: 20px;
-            background-image: url("../Imagenes/logo_fondo.gif");
+           
         }
 
         h2 {
@@ -441,7 +421,7 @@
             padding-right: toRem(10);
 
             @media (min-width:992px) {
-                color: rgba(21, 16, 111, 0.499);
+                color: map-get($map: $palette, $key: "dark");
                 font-size: toRem(70);
             }
         }
@@ -451,7 +431,7 @@
             flex-direction: column;
             padding: toRem(10) toRem(15);
 
-            @media (min-width:992px) {
+            @media (min-width:767px) {
                 flex-direction: row;
                 padding: 0 10% 0 10%;
 

@@ -30,7 +30,7 @@
         }
 
         &_title {
-            color: rgba(255, 255, 255, 0.903);
+            color: map-get($map: $palette, $key:"light" );
             font-size: 3em;
             font-weight: bold;
             padding-left: 15px;
@@ -38,7 +38,7 @@
             margin-top: 70px;
 
             @media (min-width:992px) {
-                color: black;
+                color: map-get($map: $palette, $key:"dark" );
                 font-size: 7em;
                 grid-row-start: 1;
                 grid-row-end: 3;
@@ -78,14 +78,14 @@
             }
 
             &_title {
-                color: white;
+                color: map-get($map: $palette, $key: "light");
                 font-size: toRem(28);
                 font-weight: 500;
                 text-align: center;
                 padding-top: toRem(20);
 
                 @media (min-width:992px) {
-                    color: black;
+                    color: map-get($map: $palette, $key:"dark");
                     font-size: toRem(70);
                     font-weight: bold;
                     padding-top: toRem(30);
@@ -94,7 +94,22 @@
             }
 
             label {
-                color: white;
+                color: map-get($map: $palette, $key: "light" );
+            }
+
+            .buton{
+                @extend %cta;
+                color: map-get($map: $palette, $key: "dark" );
+                @media (min-width:992px) {
+                    color: map-get($map: $palette, $key:"light" );
+                    background-color: map-get($map: $palette, $key: "background_button" );
+                    &:hover{
+                        color: map-get($map: $palette, $key: "background_button" );
+                    background-color:   map-get($map: $palette, $key:"light" );
+                    }
+                    
+                }
+                
             }
 
         }
@@ -113,14 +128,14 @@
                 grid-area: mapa;
             }
             &_title {
-                color: white;
+                color:map-get($map: $palette, $key:"light" );
                 font-size: toRem(28);
                 font-weight: 500;
                 text-align: center;
                 padding-top: toRem(20);
 
                 @media (min-width:992px) {
-                    color: black;
+                    color:map-get($map: $palette, $key: "dark" );
                     font-size: toRem(70);
                     font-weight: bold;
                     padding-top: toRem(30);
@@ -145,10 +160,10 @@
             }
 
             &_horarios_atencion{
-                background-color: rgba(255, 255, 255, 0.348);
+                background-color: map-get($map: $palette , $key: "light_gradient");
                 border-bottom: toRem(25);
                 @media (min-width:992px) {
-                    background-color: rgba(255, 255, 255, 0.325);
+                    background-color: map-get($map: $palette , $key: "light_gradient");
                     border-bottom: toRem(25);
                     padding: toRem(25);
                     grid-area: horarios;
