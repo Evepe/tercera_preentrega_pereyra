@@ -1,13 +1,13 @@
 
 .promociones_main_principal {
-    background-image: url("../Imagenes/promociones_background_mobile.png");
+    background-image: url("../imagenes/promociones_background_mobile.png");
     background-attachment: fixed;
     @include parallax;
     @include flex(center, center, flex-end, center);
     height: 100vh;
 
     @media (min-width: 992px) {
-        background-image: url("../Imagenes/promocionesfondo.png");
+        background-image: url("../imagenes/promocionesfondo.jpg");
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);

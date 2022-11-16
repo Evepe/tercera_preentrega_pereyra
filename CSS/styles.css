@@ -82,14 +82,13 @@ a {
     justify-content: space-around;
     align-items: center;
     background-color: aliceblue;
-    z-index: 4; }
+    z-index: 1; }
     .main_header_nav {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       justify-content: end;
       gap: 0 20px;
-      text-align: center;
-      z-index: 4; }
+      text-align: center; }
       .main_header_nav a {
         color: black; }
         .main_header_nav a:hover {
@@ -150,7 +149,7 @@ a {
           margin-left: 10px; } }
 
 .main_principal_parallax {
-  background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/fondo_mobile.png");
+  background-image: linear-gradient(#00000093, #00000038), url("../imagenes/fondo_mobile.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,14 +163,14 @@ a {
   height: 100vh; }
   @media (min-width: 767px) {
     .main_principal_parallax {
-      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/backgraund_index_tablet.gif");
+      background-image: linear-gradient(#00000093, #00000038), url("../imagenes/backgraund_index_tablet.jpg");
       background-attachment: fixed;
       flex-direction: column;
       justify-items: flex-start;
       align-content: flex-start; } }
   @media (min-width: 992px) {
     .main_principal_parallax {
-      background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png"); } }
+      background-image: linear-gradient(#00000093, #00000038), url("../imagenes/imagenContPrinc.jpg"); } }
 
 .main_principal_textbackground {
   color: rgba(0, 0, 0, 0.238);
@@ -179,8 +178,7 @@ a {
   word-break: break-all;
   position: absolute;
   bottom: -10.625rem;
-  font-weight: bolder;
-  z-index: 5; }
+  font-weight: bolder; }
   @media (min-width: 767px) {
     .main_principal_textbackground {
       font-size: 9.375rem;
@@ -354,7 +352,7 @@ a {
     gap: 15px; } }
 
 .main_principal .salto_parallax {
-  background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/saltosparallax.jpg");
+  background-image: linear-gradient(#00000093, #00000038), url("../imagenes/saltosparallax.jpg");
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -445,7 +443,7 @@ a {
       grid-template-areas: "presentacion presentacion presentacion" ". articulo ." "boton . .";
       gap: 15px; } }
   .main_principal .curso_parallax {
-    background-image: url("../Imagenes/saltosseccion.jpeg");
+    background-image: url("../imagenes/saltosseccion.jpg");
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -519,7 +517,7 @@ a {
   flex-direction: column; }
   @media (min-width: 767px) {
     .main_principal .videos {
-      background-image: url("../Imagenes/fondo.png");
+      background-image: url("../imagenes/fondo.png");
       width: 100%;
       background-position: center;
       background-repeat: no-repeat;
@@ -554,7 +552,7 @@ a {
       padding: 0.625rem 0; }
 
 .promociones_main_principal {
-  background-image: url("../Imagenes/promociones_background_mobile.png");
+  background-image: url("../imagenes/promociones_background_mobile.png");
   background-attachment: fixed;
   width: 100%;
   background-position: center;
@@ -569,7 +567,7 @@ a {
   height: 100vh; }
   @media (min-width: 992px) {
     .promociones_main_principal {
-      background-image: url("../Imagenes/promocionesfondo.png");
+      background-image: url("../imagenes/promocionesfondo.jpg");
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr); } }
@@ -634,7 +632,7 @@ a {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../Imagenes/fotoSchool.jpg");
+  background-image: url("../imagenes/fotoSchool.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -652,8 +650,7 @@ a {
     font-size: 10.625rem;
     word-break: break-all;
     position: absolute;
-    font-weight: bolder;
-    z-index: 5; }
+    font-weight: bolder; }
     @media (min-width: 992px) {
       .contact_main_principal_parallax_text_background {
         font-size: 14.375rem; } }
@@ -681,7 +678,7 @@ a {
   align-content: stretch;
   align-items: center;
   flex-direction: column;
-  background-image: url("../Imagenes/fondo_curso_mobile.gif");
+  background-image: url("../imagenes/fondo_curso_mobile.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -690,7 +687,7 @@ a {
     .contact_main_principal_content {
       display: grid;
       grid-template-areas: "formulario mapa" "horarios .";
-      background-image: url("../Imagenes/fondo.png"); } }
+      background-image: url("../imagenes/fondo.png"); } }
   .contact_main_principal_content_escribinos {
     background-color: #00000079;
     border-radius: 1.25rem;
@@ -777,253 +774,265 @@ a {
           padding: 1.5625rem;
           grid-area: horarios; } }
 
-.Saltos_main_principal_parallax {
-  background-image: url("../Imagenes/saltosparallax.jpg");
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  justify-items: none;
-  align-content: space-around;
-  align-items: none;
-  flex-direction: column;
-  height: 100vh; }
-  @media (min-width: 992px) {
-    .Saltos_main_principal_parallax {
-      background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../Imagenes/saltosparallax.jpg");
-      background-attachment: fixed;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr); } }
-  .Saltos_main_principal_parallax_title {
-    color: #ffffff;
-    font-size: 3em;
-    font-weight: bold;
-    padding-left: 15px;
-    position: relative;
-    margin-top: 70px; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_parallax_title {
-        color: #000;
-        font-size: 7em;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 2; } }
-  .Saltos_main_principal_parallax_subtitle {
-    font-size: 3em;
+.Saltos_main_principal {
+  overflow: -moz-hidden-unscrollable; }
+  .Saltos_main_principal_parallax {
+    background-image: url("../imagenes/saltosparallax.jpg");
     width: 100%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding-left: 15px; }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    justify-items: none;
+    align-content: space-around;
+    align-items: none;
+    flex-direction: column;
+    height: 100vh; }
     @media (min-width: 992px) {
-      .Saltos_main_principal_parallax_subtitle {
-        color: #000;
-        font-size: 4em;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 4; } }
-
-.Saltos_main_principal_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  align-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../Imagenes/promocionesfondo.png");
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 1.25rem; }
-  @media (min-width: 992px) {
-    .Saltos_main_principal_wrapper {
-      background-image: url("../Imagenes/fondo.png");
+      .Saltos_main_principal_parallax {
+        background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../imagenes/saltosparallax.jpg");
+        background-attachment: fixed;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); } }
+    .Saltos_main_principal_parallax_title {
+      color: #ffffff;
+      font-size: 3em;
+      font-weight: bold;
+      padding-left: 15px;
+      position: relative;
+      margin-top: 70px; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_parallax_title {
+          color: #000;
+          font-size: 7em;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 2; } }
+    .Saltos_main_principal_parallax_subtitle {
+      font-size: 3em;
       width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: grid;
-      align-items: space-around;
-      justify-content: center;
-      justify-items: center;
-      align-content: center; } }
-  .Saltos_main_principal_wrapper_cont {
+      margin-top: 0%;
+      margin-bottom: 0%;
+      padding-left: 15px; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_parallax_subtitle {
+          color: #000;
+          font-size: 4em;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 4; } }
+  .Saltos_main_principal_wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-items: none;
-    align-content: none;
+    justify-items: center;
+    align-content: space-around;
     align-items: center;
     flex-direction: column;
-    width: 100%; }
-    .Saltos_main_principal_wrapper_cont_paragraph {
-      color: #ffffff;
-      font-size: 1.75rem;
-      font-weight: 500;
-      text-align: center;
-      padding-top: 1.25rem; }
-      @media (min-width: 992px) {
-        .Saltos_main_principal_wrapper_cont_paragraph {
-          color: #000;
-          font-size: 4.375rem;
-          font-weight: bold;
-          padding-top: 1.875rem;
-          padding-left: 1.5625rem; } }
-    .Saltos_main_principal_wrapper_cont_paragraph_dos {
-      color: #ffffff;
-      font-size: 1.5625rem;
-      font-weight: 500;
-      text-align: center;
-      padding-top: 0.625rem; }
-      @media (min-width: 992px) {
-        .Saltos_main_principal_wrapper_cont_paragraph_dos {
-          color: #000;
-          font-size: 1.875rem;
-          font-weight: 300;
-          padding-top: 1.25rem; } }
-  .Saltos_main_principal_wrapper_imagenes {
-    display: none; }
+    background-image: url("../imagenes/promocionesfondo.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 1.25rem; }
     @media (min-width: 992px) {
-      .Saltos_main_principal_wrapper_imagenes {
-        display: block; } }
-    .Saltos_main_principal_wrapper_imagenes_dos {
-      display: none; }
-      @media (min-width: 992px) {
-        .Saltos_main_principal_wrapper_imagenes_dos {
-          display: block;
-          overflow: hidden;
-          padding-left: 18.75rem; } }
-      .Saltos_main_principal_wrapper_imagenes_dos_mobile {
-        display: block; }
-        @media (min-width: 992px) {
-          .Saltos_main_principal_wrapper_imagenes_dos_mobile {
-            display: none; } }
-  .Saltos_main_principal_wrapper_descripcion {
-    background-color: #0000004a;
-    border-radius: 0.3125rem;
-    margin: 0.3125rem;
-    padding-bottom: 0.9375rem; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_wrapper_descripcion {
-        background-color: rgba(255, 255, 255, 0.397);
-        border-radius: 5rem;
-        grid-area: "texto";
-        font-size: 1.25rem;
-        font-weight: 500;
-        width: 70%;
-        padding-top: 4.375rem;
-        padding-left: 3.125rem;
-        padding-right: 3.125rem; } }
-    .Saltos_main_principal_wrapper_descripcion p {
-      color: #ffffff;
-      margin-left: 0.625rem;
-      margin-top: 0.625rem; }
-      @media (min-width: 992px) {
-        .Saltos_main_principal_wrapper_descripcion p {
-          color: #000;
-          margin-top: 0.3125rem; } }
-  .Saltos_main_principal_wrapper_cta {
-    padding: 0.3125rem; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_wrapper_cta {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        padding: 0.625rem; } }
-
-.Saltos_main_principal_videos {
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: none;
-  align-items: center;
-  flex-direction: column; }
-  @media (min-width: 992px) {
-    .Saltos_main_principal_videos {
+      .Saltos_main_principal_wrapper {
+        background-image: url("../imagenes/fondo.png");
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-areas: "escrito1  imagen" "escrito2  imagen" "imagen2 explicacion";
+        align-items: space-around;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        overflow: hidden;
+        overflow: -moz-scrollbars-none; } }
+    .Saltos_main_principal_wrapper_cont {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-evenly;
-      justify-items: center;
-      align-content: center;
+      justify-content: center;
+      justify-items: none;
+      align-content: none;
       align-items: center;
-      flex-direction: row; } }
-  .Saltos_main_principal_videos iframe {
-    padding-top: 0.625rem; }
-
-.Saltos_main_principal_recomendaciones {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../Imagenes/fondo_recomendaciones.gif");
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 992px) {
-    .Saltos_main_principal_recomendaciones {
-      padding-top: 1.5625rem;
-      padding-bottom: 2.1875rem;
-      display: grid;
-      grid-template-areas: "title title title" "fisicas imagen indumentaria"; } }
-  .Saltos_main_principal_recomendaciones_title {
-    font-size: 3.125rem;
-    text-align: center; }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_recomendaciones_title {
-        grid-area: title;
-        font-size: 3.125rem;
-        font-weight: bold;
+      flex-direction: column;
+      width: 100%; }
+      .Saltos_main_principal_wrapper_cont_paragraph {
+        color: #ffffff;
+        font-size: 1.75rem;
+        font-weight: 500;
         text-align: center;
-        padding-bottom: 1.25rem; } }
-  .Saltos_main_principal_recomendaciones_fisicas {
-    background-color: rgba(255, 255, 255, 0.397);
-    padding: 1.25rem; }
+        padding-top: 1.25rem; }
+        @media (min-width: 992px) {
+          .Saltos_main_principal_wrapper_cont_paragraph {
+            color: #000;
+            font-size: 4.375rem;
+            font-weight: bold;
+            padding-top: 1.875rem;
+            padding-left: 1.5625rem;
+            grid-area: escrito1;
+            margin-left: 3.125rem;
+            margin-top: 9.375rem; } }
+      .Saltos_main_principal_wrapper_cont_paragraph_dos {
+        color: #ffffff;
+        font-size: 1.5625rem;
+        font-weight: 500;
+        text-align: center;
+        padding-top: 0.625rem; }
+        @media (min-width: 992px) {
+          .Saltos_main_principal_wrapper_cont_paragraph_dos {
+            color: #000;
+            font-size: 1.875rem;
+            font-weight: 300;
+            padding-top: 1.25rem;
+            grid-area: escrito2;
+            margin-left: 3.625rem; } }
+    .Saltos_main_principal_wrapper_imagenes {
+      display: none; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_imagenes {
+          display: block;
+          grid-area: imagen;
+          overflow: hidden; } }
+      .Saltos_main_principal_wrapper_imagenes_dos {
+        display: none; }
+        @media (min-width: 992px) {
+          .Saltos_main_principal_wrapper_imagenes_dos {
+            display: block;
+            overflow: hidden;
+            grid-area: imagen2;
+            margin-left: 2.5rem; } }
+        .Saltos_main_principal_wrapper_imagenes_dos_mobile {
+          display: block; }
+          @media (min-width: 992px) {
+            .Saltos_main_principal_wrapper_imagenes_dos_mobile {
+              display: none; } }
+    .Saltos_main_principal_wrapper_descripcion {
+      background-color: #0000004a;
+      border-radius: 0.3125rem;
+      margin: 0.3125rem;
+      padding-bottom: 0.9375rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_descripcion {
+          background-color: rgba(255, 255, 255, 0.397);
+          border-radius: 5rem;
+          grid-area: "texto";
+          font-size: 1.25rem;
+          font-weight: 500;
+          width: 80%;
+          padding-top: 4.375rem;
+          padding-left: 3.125rem;
+          padding-right: 3.125rem;
+          grid-area: explicacion;
+          margin-right: 1.875rem; } }
+      .Saltos_main_principal_wrapper_descripcion p {
+        color: #ffffff;
+        margin-left: 0.625rem;
+        margin-top: 0.625rem; }
+        @media (min-width: 992px) {
+          .Saltos_main_principal_wrapper_descripcion p {
+            color: #000;
+            margin-top: 0.3125rem; } }
+    .Saltos_main_principal_wrapper_cta {
+      padding: 0.3125rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_wrapper_cta {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          padding: 0.625rem; } }
+  .Saltos_main_principal_videos {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: none;
+    align-items: center;
+    flex-direction: column; }
     @media (min-width: 992px) {
-      .Saltos_main_principal_recomendaciones_fisicas {
-        grid-area: fisicas;
-        background-color: rgba(255, 255, 255, 0.397);
-        border-radius: 1.5625rem;
-        margin-left: 2.5rem;
-        padding-bottom: 1.25rem; } }
-    @media (min-width: 992) {
-      .Saltos_main_principal_recomendaciones_fisicas_title {
-        padding-left: 1.875rem;
-        padding-top: 1.25rem; } }
-    @media (min-width: 992) {
-      .Saltos_main_principal_recomendaciones_fisicas p {
-        padding-left: 1.875rem; } }
-  .Saltos_main_principal_recomendaciones_indumentaria {
-    background-color: rgba(255, 255, 255, 0.397);
-    padding: 1.25rem; }
+      .Saltos_main_principal_videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: row; } }
+    .Saltos_main_principal_videos iframe {
+      padding-top: 0.625rem; }
+  .Saltos_main_principal_recomendaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../imagenes/fondo_recomendaciones.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
     @media (min-width: 992px) {
-      .Saltos_main_principal_recomendaciones_indumentaria {
-        grid-area: indumentaria;
-        border-radius: 1.5625rem;
-        margin-right: 2.5rem;
-        padding-bottom: 1.25rem; } }
+      .Saltos_main_principal_recomendaciones {
+        padding-top: 1.5625rem;
+        padding-bottom: 2.1875rem;
+        display: grid;
+        grid-template-areas: "title title title" "fisicas imagen indumentaria"; } }
+    .Saltos_main_principal_recomendaciones_title {
+      font-size: 3.125rem;
+      text-align: center; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_recomendaciones_title {
+          grid-area: title;
+          font-size: 3.125rem;
+          font-weight: bold;
+          text-align: center;
+          padding-bottom: 1.25rem; } }
+    .Saltos_main_principal_recomendaciones_fisicas {
+      background-color: rgba(255, 255, 255, 0.397);
+      padding: 1.25rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_recomendaciones_fisicas {
+          grid-area: fisicas;
+          background-color: rgba(255, 255, 255, 0.397);
+          border-radius: 1.5625rem;
+          margin-left: 2.5rem;
+          padding-bottom: 1.25rem; } }
+      @media (min-width: 992) {
+        .Saltos_main_principal_recomendaciones_fisicas_title {
+          padding-left: 1.875rem;
+          padding-top: 1.25rem; } }
+      @media (min-width: 992) {
+        .Saltos_main_principal_recomendaciones_fisicas p {
+          padding-left: 1.875rem; } }
+    .Saltos_main_principal_recomendaciones_indumentaria {
+      background-color: rgba(255, 255, 255, 0.397);
+      padding: 1.25rem; }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_recomendaciones_indumentaria {
+          grid-area: indumentaria;
+          border-radius: 1.5625rem;
+          margin-right: 2.5rem;
+          padding-bottom: 1.25rem; } }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_recomendaciones_indumentaria_title {
+          padding-left: 1.875rem;
+          padding-top: 1.25rem; } }
+      @media (min-width: 992px) {
+        .Saltos_main_principal_recomendaciones_indumentaria p {
+          padding-left: 1.875rem; } }
     @media (min-width: 992px) {
-      .Saltos_main_principal_recomendaciones_indumentaria_title {
-        padding-left: 1.875rem;
-        padding-top: 1.25rem; } }
-    @media (min-width: 992px) {
-      .Saltos_main_principal_recomendaciones_indumentaria p {
-        padding-left: 1.875rem; } }
-  @media (min-width: 992px) {
-    .Saltos_main_principal_recomendaciones_img_rec {
-      grid-area: imagen; } }
+      .Saltos_main_principal_recomendaciones_img_rec {
+        grid-area: imagen; } }
 
 .cursos_main_principal {
   display: flex;
@@ -1033,7 +1042,7 @@ a {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../Imagenes/curso_uno.jpg");
+  background-image: url("../imagenes/curso_uno.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1041,7 +1050,7 @@ a {
   height: 100vh; }
   @media (min-width: 992px) {
     .cursos_main_principal {
-      background-image: url("../Imagenes/fondo_curso_present.gif"), linear-gradient(#000000b7, #00000038);
+      background-image: url("../imagenes/fondo_curso_present.jpg"), linear-gradient(#000000b7, #00000038);
       background-attachment: fixed;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -1103,14 +1112,14 @@ a {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../Imagenes/fondo_curso_mobile.gif");
+  background-image: url("../imagenes/fondo_curso_mobile.jpg");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   @media (min-width: 992px) {
     .cursos_card {
-      background-image: url("../Imagenes/fondo.png");
+      background-image: url("../imagenes/fondo.png");
       width: 100%;
       background-position: center;
       background-repeat: no-repeat;

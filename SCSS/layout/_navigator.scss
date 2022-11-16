@@ -48,7 +48,7 @@ a{
         justify-content: space-around;
         align-items: center;
         background-color: rgb(240, 248, 255);
-        z-index: 4;
+        z-index:1;
         
 
         &_nav {
@@ -57,7 +57,6 @@ a{
             justify-content: end;
             gap: 0 20px;
             text-align: center;
-            z-index: 4;
 
             a {
                 color: black;

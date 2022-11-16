@@ -20,3 +20,6 @@
     @return $remValue;
 }
 
+@function ColorOpacity($color, $opacity) {
+    @return background-color(($color), $opacity);
+}

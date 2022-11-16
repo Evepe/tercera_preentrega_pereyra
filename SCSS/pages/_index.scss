@@ -1,13 +1,13 @@
 .main_principal {
     
     &_parallax {
-        background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/fondo_mobile.png");
+        background-image: linear-gradient(#00000093, #00000038), url("../imagenes/fondo_mobile.jpg");
         @include parallax;
         @include flex (center, none, space-around, none);
         height: 100vh;
 
         @media (min-width:767px) {
-            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/backgraund_index_tablet.gif");
+            background-image: linear-gradient(#00000093, #00000038), url("../imagenes/backgraund_index_tablet.jpg");
             background-attachment: fixed;
             flex-direction: column;
             justify-items: flex-start;
@@ -15,7 +15,7 @@
         }
 
         @media (min-width:992px) {
-            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/imagenContPrinc.png"); 
+            background-image: linear-gradient(#00000093, #00000038), url("../imagenes/imagenContPrinc.jpg"); 
         }
     }
 
@@ -26,7 +26,7 @@
         position: absolute;
         bottom: toRem(-170);
         font-weight: bolder;
-        z-index: 5;
+      
          
 
     @media (min-width:767px) {
@@ -234,7 +234,7 @@
         }
 
         &_parallax {
-            background-image: linear-gradient(#00000093, #00000038), url("../Imagenes/saltosparallax.jpg");
+            background-image: linear-gradient(#00000093, #00000038), url("../imagenes/saltosparallax.jpg");
             @include flex(flex-start, none, flex-end, none);
             @include parallax;
             height: 100vh;
@@ -329,7 +329,7 @@
         }
 
         &_parallax {
-            background-image: url("../Imagenes/saltosseccion.jpeg");
+            background-image: url("../imagenes/saltosseccion.jpg");
             @include flex(flex-start, none, flex-end, none);
             @include parallax;
             height: 100vh;
@@ -403,7 +403,7 @@
         flex-direction: column;
 
         @media (min-width:767px) {
-            background-image: url("../Imagenes/fondo.png");
+            background-image: url("../imagenes/fondo.png");
             @include parallax;
             
         }

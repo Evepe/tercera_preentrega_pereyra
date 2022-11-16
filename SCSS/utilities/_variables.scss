@@ -1,7 +1,9 @@
 $coloruno:#1245;
 $background_button:rgb(255,43,67);
 $nocolor:rgba(255, 255, 255, 0);
+$prueba: rgb(145, 255, 0);
 
+$opacity: opacity;
 
 $palette: (
     "background_button":#ff2b43,
@@ -19,3 +21,4 @@ $breackpoint: (
     "tablet": min-width= 767px,
     "desktop": min-width= 992px,
 );
+

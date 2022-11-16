@@ -1,12 +1,29 @@
-@import "./utilities/variables";
-@import "./utilities/mixins";
-@import "./components/buttons";
-@import "./base/fonts";
-@import "./base/reset";
-@import "./layout/navigator";
-@import "./layout/footer";
-@import "./pages/index";
-@import "./pages/promociones";
-@import "./pages/contact";
-@import "./pages/salto_bautismo.scss";
-@import "./pages/cursos.scss";
+//bootstrap
+//@import "../node_modules/bootstrap/scss/bootstrap";
+
+//utilities
+
+@import 
+        "./utilities/variables",
+         "./utilities/mixins";
+
+//components
+@import 
+        "./components/buttons";
+
+//base
+@import 
+        "./base/fonts",
+         "./base/reset";
+
+//layout
+@import 
+        "./layout/navigator",
+         "./layout/footer";
+
+//pages
+@import "./pages/index",
+         "./pages/promociones",
+         "./pages/contact",
+         "./pages/salto_bautismo.scss",
+         "./pages/cursos.scss";

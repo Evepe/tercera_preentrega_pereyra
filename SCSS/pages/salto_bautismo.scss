@@ -1,14 +1,15 @@
 .Saltos {
     &_main_principal {
+        overflow: -moz-hidden-unscrollable;
         &_parallax {
-            background-image: url("../Imagenes/saltosparallax.jpg");
+            background-image: url("../imagenes/saltosparallax.jpg");
             @include parallax;
             @include flex(flex-end, none, space-around, none);
             flex-direction: column;
             height: 100vh;
 
             @media (min-width:992px) {
-                background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../Imagenes/saltosparallax.jpg");
+                background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.274)), url("../imagenes/saltosparallax.jpg");
                 background-attachment: fixed;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -55,19 +56,25 @@
         &_wrapper {
             @include flex(center, center, space-around, center);
             flex-direction: column;
-            background-image: url("../Imagenes/promocionesfondo.png");
+            background-image: url("../imagenes/promocionesfondo.jpg");
             @include parallax;
             padding-bottom: toRem(20);
 
 
             @media (min-width:992px) {
-                background-image: url("../Imagenes/fondo.png");
+                background-image: url("../imagenes/fondo.png");
                 @include parallax;
                 display: grid;
+                grid-template-areas: 
+                "escrito1  imagen"
+                "escrito2  imagen"
+                "imagen2 explicacion";
                 align-items: space-around;
                 justify-content: center;
                 justify-items: center;
                 align-content: center;
+                overflow: hidden;
+                overflow:-moz-scrollbars-none;
             }
 
 
@@ -75,7 +82,6 @@
                 @include flex(center, none, none, center);
                 flex-direction: column;
                 width: 100%;
-
 
 
                 &_paragraph {
@@ -90,7 +96,10 @@
                         font-size: toRem(70);
                         font-weight: bold;
                         padding-top: toRem(30);
-                        padding-left: toRem(25)
+                        padding-left: toRem(25);
+                        grid-area: escrito1;
+                        margin-left: toRem(50);
+                        margin-top: toRem(150);
                     }
                 }
 
@@ -106,6 +115,8 @@
                         font-size: toRem(30);
                         font-weight: 300;
                         padding-top: toRem(20);
+                        grid-area: escrito2;
+                        margin-left: toRem(58);
                     }
                 }
 
@@ -116,6 +127,9 @@
 
                 @media (min-width:992px) {
                     display: block;
+                    grid-area: imagen;
+                    overflow:hidden;
+                    
                 }
 
 
@@ -125,7 +139,8 @@
                     @media (min-width:992px) {
                         display: block;
                         overflow: hidden;
-                        padding-left: toRem(300);
+                        grid-area: imagen2;
+                        margin-left: toRem(40);
 
                     }
 
@@ -153,10 +168,12 @@
                     grid-area: "texto";
                     font-size: toRem(20);
                     font-weight: 500;
-                    width: 70%;
+                    width: 80%;
                     padding-top: toRem(70);
                     padding-left: toRem(50);
                     padding-right: toRem(50);
+                    grid-area: explicacion;
+                    margin-right: toRem(30);
                 }
 
                 p {
@@ -204,7 +221,7 @@
             &_recomendaciones {
                 @include flex(center, center, center, center);
                 flex-direction: column;
-                background-image: url("../Imagenes/fondo_recomendaciones.gif");
+                background-image: url("../imagenes/fondo_recomendaciones.jpg");
                 @include parallax;
 
                 @media (min-width:992px) {
@@ -286,11 +303,11 @@
                     @media (min-width:992px) {
                         grid-area: imagen;
                     }
-                
                 }
             }
         }
     }
+    
 
             
         

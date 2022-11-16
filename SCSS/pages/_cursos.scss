@@ -2,14 +2,14 @@
     &_main_principal {
         @include flex (space-between, center, center, center);
         flex-direction: column;
-        background-image: url("../Imagenes/curso_uno.jpg");
+        background-image: url("../imagenes/curso_uno.jpg");
         @include parallax;
         height: 100vh;
 
 
 
         @media (min-width:992px) {
-            background-image: url("../Imagenes/fondo_curso_present.gif"), linear-gradient(#000000b7, #00000038);
+            background-image: url("../imagenes/fondo_curso_present.jpg"), linear-gradient(#000000b7, #00000038);
             background-attachment: fixed;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -79,11 +79,11 @@
     &_card {
         @include flex (center, center, center, center);
         flex-direction: column;
-        background-image: url("../Imagenes/fondo_curso_mobile.gif");
+        background-image: url("../imagenes/fondo_curso_mobile.jpg");
         @include parallax;
 
         @media (min-width:992px) {
-            background-image: url("../Imagenes/fondo.png");
+            background-image: url("../imagenes/fondo.png");
             @include parallax;
             display: grid;
             grid-template-areas:
@@ -115,7 +115,6 @@
                 @media (min-width:992px) {
                     font-size: toRem(60);
                     padding: toRem(30);
-
                 }
             }
 

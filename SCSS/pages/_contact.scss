@@ -2,7 +2,7 @@
     &_parallax {
         @include flex (space-evenly, center, center, center);
         flex-direction: column;
-        background-image: url("../Imagenes/fotoSchool.jpg");
+        background-image: url("../imagenes/fotoSchool.jpg");
         @include parallax;
         height: 100vh;
 
@@ -22,7 +22,6 @@
             word-break: break-all;
             position: absolute;
             font-weight: bolder;
-            z-index: 5;
 
             @media (min-width:992px) {
                 font-size: toRem(230);
@@ -52,7 +51,7 @@
     &_content {
         @include flex (center, center, stretch, center);
         flex-direction: column;
-        background-image: url("../Imagenes/fondo_curso_mobile.gif");
+        background-image: url("../imagenes/fondo_curso_mobile.jpg");
         @include parallax;
 
 
@@ -61,7 +60,7 @@
             grid-template-areas:
                 "formulario mapa"
                 "horarios .";
-            background-image: url("../Imagenes/fondo.png");
+            background-image: url("../imagenes/fondo.png");
         }
 
         &_escribinos {
