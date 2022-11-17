@@ -9446,99 +9446,80 @@ a {
     .Saltos_main_principal_recomendaciones_img_rec {
       grid-area: imagen; } }
 
-.cursos_main_principal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../imagenes/curso_uno.jpg");
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; }
-  @media (min-width: 992px) {
-    .cursos_main_principal {
-      background-image: url("../imagenes/fondo_curso_present.jpg"), linear-gradient(#000000b7, #00000038);
-      background-attachment: fixed;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      gap: 0.9375rem; } }
-  .cursos_main_principal_imagen {
-    display: none; }
+.cursos {
+  overflow: hidden; }
+  .cursos_main_principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../imagenes/curso_uno.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; }
     @media (min-width: 992px) {
-      .cursos_main_principal_imagen {
-        display: flex;
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        z-index: 3; } }
-  .cursos_main_principal_title {
-    font-size: 3.75rem;
-    margin-top: 1.875rem; }
-    @media (min-width: 776px) {
-      .cursos_main_principal_title {
-        font-size: 9.375rem; } }
-    @media (min-width: 992px) {
-      .cursos_main_principal_title {
-        font-size: 15.625rem;
-        font-weight: bold;
-        color: rgba(5, 5, 5, 0.666);
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        z-index: 2; } }
-  .cursos_main_principal_paragraph {
-    background-color: rgba(255, 255, 255, 0.397);
-    font-size: 1.25rem;
-    font-weight: 300;
-    padding: 0.9375rem; }
-    @media (min-width: 776px) {
-      .cursos_main_principal_paragraph {
-        font-size: 1.875rem;
-        padding: 1.875rem; } }
-    @media (min-width: 992px) {
-      .cursos_main_principal_paragraph {
-        width: 70%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.279);
-        font-size: 20px;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 6;
-        padding: 1.875rem;
-        margin-bottom: 6.25rem; } }
-
-.cursos_card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../imagenes/fondo_curso_mobile.jpg");
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 992px) {
-    .cursos_card {
-      background-image: url("../imagenes/fondo.png");
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: grid;
-      grid-template-areas: "card card imagen" "etapas etapas etapas" "niveles niveles niveles"; } }
-  .cursos_card_wrapper {
+      .cursos_main_principal {
+        background-image: url("../imagenes/fondo_curso_present.jpg"), linear-gradient(#000000b7, #00000038);
+        background-attachment: fixed;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.9375rem; } }
+    .cursos_main_principal_imagen {
+      display: none; }
+      @media (min-width: 992px) {
+        .cursos_main_principal_imagen {
+          display: flex;
+          grid-column-start: 3;
+          grid-column-end: 6;
+          grid-row-start: 3;
+          grid-row-end: 5;
+          z-index: 1; } }
+    .cursos_main_principal_title {
+      font-size: 3.75rem;
+      margin-top: 1.875rem; }
+      @media (min-width: 776px) {
+        .cursos_main_principal_title {
+          font-size: 8.75rem; } }
+      @media (min-width: 992px) {
+        .cursos_main_principal_title {
+          font-size: 12.5rem;
+          font-weight: bold;
+          color: rgba(5, 5, 5, 0.666);
+          grid-column-start: 2;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          margin-top: 4.875rem;
+          z-index: 0; } }
+    .cursos_main_principal_paragraph {
+      background-color: rgba(255, 255, 255, 0.397);
+      font-size: 1.25rem;
+      font-weight: 300;
+      padding: 0.9375rem; }
+      @media (min-width: 776px) {
+        .cursos_main_principal_paragraph {
+          font-size: 1.875rem;
+          padding: 1.875rem; } }
+      @media (min-width: 992px) {
+        .cursos_main_principal_paragraph {
+          width: 70%;
+          height: 100%;
+          background-color: rgba(251, 251, 251, 0.323);
+          font-size: 20px;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 4;
+          grid-row-end: 6;
+          padding: 1.875rem;
+          margin-bottom: 6.25rem;
+          z-index: 2; } }
+  .cursos_card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9546,226 +9527,264 @@ a {
     align-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.397);
-    margin-top: 1.5625rem;
-    width: 90%;
-    border-radius: 0.9375rem; }
+    background-image: url("../imagenes/fondo_curso_mobile.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
     @media (min-width: 992px) {
-      .cursos_card_wrapper {
-        grid-area: card;
-        background-color: rgba(0, 0, 0, 0.397); } }
-    .cursos_card_wrapper_title {
-      margin-top: 0.9375rem;
-      font-size: 1.875rem;
-      text-align: center;
-      background-color: rgba(255, 43, 68, 0.534); }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_title {
-          font-size: 3.75rem;
-          padding: 1.875rem; } }
-    .cursos_card_wrapper_subtitle {
-      font-size: 1.25rem;
-      padding-top: 0.625rem;
-      padding-bottom: 0.625rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_subtitle {
-          font-size: 2.8125rem; } }
-    .cursos_card_wrapper_paragraph_costo {
-      font-size: 0.9375rem;
-      padding-top: 0.1875rem;
-      padding-bottom: 0.1875rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_paragraph_costo {
-          font-size: 1.875rem; } }
-    .cursos_card_wrapper_paragraph_ticket {
-      font-size: 0.9375rem;
-      padding-top: 0.1875rem;
-      padding-bottom: 0.1875rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_paragraph_ticket {
-          font-size: 1.875rem; } }
-    .cursos_card_wrapper_paragraph_equipo {
-      font-size: 0.9375rem;
-      padding-top: 0.1875rem;
-      padding-bottom: 0.1875rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_paragraph_equipo {
-          font-size: 1.875rem; } }
-    .cursos_card_wrapper_paragraph_instruccion {
-      font-size: 0.9375rem;
-      padding-top: 0.1875rem;
-      padding-bottom: 0.1875rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_paragraph_instruccion {
-          font-size: 1.875rem; } }
-    .cursos_card_wrapper_paragraph_material {
-      font-size: 0.9375rem;
-      padding-top: 0.1875rem;
-      padding-bottom: 0.1875rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_paragraph_material {
-          font-size: 1.875rem; } }
-    .cursos_card_wrapper_cta {
-      margin-top: 0.625rem;
-      margin-bottom: 0.625rem;
-      padding: 0.3125rem; }
-      @media (min-width: 992px) {
-        .cursos_card_wrapper_cta {
-          padding: 0.625rem;
-          margin-bottom: 1.5625rem; } }
-  .cursos_card_imagen_uno {
-    display: block; }
-    @media (min-width: 992px) {
-      .cursos_card_imagen_uno {
-        display: none; } }
-  .cursos_card_imagen_uno_deskop {
-    display: none; }
-    @media (min-width: 992px) {
-      .cursos_card_imagen_uno_deskop {
-        display: block;
-        grid-area: imagen; } }
-  .cursos_card_etapas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column; }
-    @media (min-width: 992px) {
-      .cursos_card_etapas {
-        grid-area: etapas;
+      .cursos_card {
+        background-image: url("../imagenes/fondo.png");
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: grid;
-        grid-template-areas: "imagen_one uno" "dos imagen_dos" "imagen_tres tres";
-        gap: 3.75rem; } }
-    .cursos_card_etapas_uno {
+        grid-template-areas: "card card imagen" "etapas etapas etapas" "niveles niveles niveles"; } }
+    .cursos_card_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
       background-color: rgba(255, 255, 255, 0.397);
+      margin-top: 1.5625rem;
       width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem; }
+      border-radius: 0.9375rem; }
       @media (min-width: 992px) {
-        .cursos_card_etapas_uno {
-          width: 100%;
-          grid-area: uno;
-          margin-right: 3.75rem; } }
-      .cursos_card_etapas_uno_title {
+        .cursos_card_wrapper {
+          grid-area: card;
+          background-color: rgba(0, 0, 0, 0.397);
+          width: 70%;
+          margin-top: 1.5625rem;
+          margin-left: 9.375rem; } }
+      .cursos_card_wrapper_title {
         margin-top: 0.9375rem;
-        font-size: 1.875rem;
+        font-size: 1.25rem;
+        width: 100%;
         text-align: center;
         background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_etapas_uno_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
-      .cursos_card_etapas_uno_img {
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_title {
+            font-size: 1.875rem;
+            padding: 0.9375rem; } }
+      .cursos_card_wrapper_subtitle {
+        font-size: 1.25rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_subtitle {
+            font-size: 1.5625rem;
+            padding: 0; } }
+      .cursos_card_wrapper_paragraph_costo {
+        font-size: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_paragraph_costo {
+            font-size: 1.25rem;
+            padding: 0; } }
+      .cursos_card_wrapper_paragraph_ticket {
+        font-size: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_paragraph_ticket {
+            font-size: 1.25rem;
+            padding: 0; } }
+      .cursos_card_wrapper_paragraph_equipo {
+        font-size: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_paragraph_equipo {
+            font-size: 1.25rem;
+            padding: 0; } }
+      .cursos_card_wrapper_paragraph_instruccion {
+        font-size: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_paragraph_instruccion {
+            font-size: 1.25rem;
+            padding: 0; } }
+      .cursos_card_wrapper_paragraph_material {
+        font-size: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_paragraph_material {
+            font-size: 1.25rem;
+            padding: 0; } }
+      .cursos_card_wrapper_cta {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        padding: 0.3125rem; }
+        @media (min-width: 992px) {
+          .cursos_card_wrapper_cta {
+            padding: 0.625rem;
+            margin-bottom: 1.5625rem; } }
+    .cursos_card_imagen_uno {
+      display: block; }
+      @media (min-width: 992px) {
+        .cursos_card_imagen_uno {
+          display: none; } }
+    .cursos_card_imagen_uno_deskop {
+      display: none; }
+      @media (min-width: 992px) {
+        .cursos_card_imagen_uno_deskop {
+          display: block;
+          grid-area: imagen; } }
+    .cursos_card_etapas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      flex-direction: column; }
+      @media (min-width: 992px) {
+        .cursos_card_etapas {
+          grid-area: etapas;
+          display: grid;
+          grid-template-areas: "imagen_one uno" "dos imagen_dos" "imagen_tres tres";
+          gap: 1.25rem; } }
+      .cursos_card_etapas_uno {
+        background-color: rgba(255, 255, 255, 0.397);
+        width: 90%;
+        border-radius: 0.9375rem;
+        padding-bottom: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_uno {
+            width: 100%;
+            grid-area: uno;
+            margin-right: 11.6875rem;
+            z-index: 1; } }
+        .cursos_card_etapas_uno_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_etapas_uno_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
+        .cursos_card_etapas_uno_img {
+          display: none;
+          z-index: 0; }
+      .cursos_card_etapas_img {
         display: none; }
-    .cursos_card_etapas_img {
-      display: none; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_img {
+            grid-area: imagen_one;
+            display: block; } }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_img_dos {
+            width: 500px;
+            height: 480px; } }
+      .cursos_card_etapas_dos {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin-top: 1.5625rem;
+        width: 90%;
+        border-radius: 0.9375rem;
+        padding-bottom: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_dos {
+            grid-area: dos;
+            margin-left: 11.25rem; } }
+        .cursos_card_etapas_dos_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_etapas_dos_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
+      .cursos_card_etapas_img_dos {
+        display: none; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_img_dos {
+            grid-area: imagen_dos;
+            display: block;
+            margin-top: 1.875rem; } }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_img_dos_picture {
+            width: 400px;
+            height: 300px;
+            margin-top: 5.875rem; } }
+      .cursos_card_etapas_tres {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin-top: 1.5625rem;
+        width: 90%;
+        border-radius: 0.9375rem;
+        padding-bottom: 0.9375rem; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_tres {
+            grid-area: tres;
+            margin-right: 8rem; } }
+        .cursos_card_etapas_tres_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_etapas_tres_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
+      .cursos_card_etapas_img_tres {
+        display: none; }
+        @media (min-width: 992px) {
+          .cursos_card_etapas_img_tres {
+            grid-area: imagen_tres;
+            display: block; } }
+    .cursos_card_niveles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      flex-direction: column; }
       @media (min-width: 992px) {
-        .cursos_card_etapas_img {
-          grid-area: imagen_one;
-          display: block; } }
-    .cursos_card_etapas_dos {
-      background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
-      width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem; }
-      @media (min-width: 992px) {
-        .cursos_card_etapas_dos {
-          grid-area: dos; } }
-      .cursos_card_etapas_dos_title {
-        margin-top: 0.9375rem;
-        font-size: 1.875rem;
-        text-align: center;
-        background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_etapas_dos_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
-    .cursos_card_etapas_img_dos {
-      display: none; }
-      @media (min-width: 992px) {
-        .cursos_card_etapas_img_dos {
-          grid-area: imagen_dos;
-          display: block; } }
-    .cursos_card_etapas_tres {
-      background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
-      width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem; }
-      @media (min-width: 992px) {
-        .cursos_card_etapas_tres {
-          grid-area: tres; } }
-      .cursos_card_etapas_tres_title {
-        margin-top: 0.9375rem;
-        font-size: 1.875rem;
-        text-align: center;
-        background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_etapas_tres_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
-    .cursos_card_etapas_img_tres {
-      display: none; }
-      @media (min-width: 992px) {
-        .cursos_card_etapas_img_tres {
-          grid-area: imagen_tres;
-          display: block; } }
-  .cursos_card_niveles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column; }
-    @media (min-width: 992px) {
-      .cursos_card_niveles {
-        grid-area: niveles;
-        display: grid;
-        grid-template-areas: "tres cinco ocho"; } }
-    .cursos_card_niveles_tres {
-      background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
-      width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem;
-      grid-area: tres; }
-      .cursos_card_niveles_tres_title {
-        margin-top: 0.9375rem;
-        font-size: 1.875rem;
-        text-align: center;
-        background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_niveles_tres_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
-    .cursos_card_niveles_cinco {
-      background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
-      width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem;
-      grid-area: cinco; }
-      .cursos_card_niveles_cinco_title {
-        margin-top: 0.9375rem;
-        font-size: 1.875rem;
-        text-align: center;
-        background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_niveles_cinco_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
-    .cursos_card_niveles_ocho {
-      background-color: rgba(255, 255, 255, 0.397);
-      margin-top: 1.5625rem;
-      margin-bottom: 1.5625rem;
-      width: 90%;
-      border-radius: 0.9375rem;
-      padding-bottom: 0.9375rem;
-      grid-area: ocho; }
-      .cursos_card_niveles_ocho_title {
-        margin-top: 0.9375rem;
-        font-size: 1.875rem;
-        text-align: center;
-        background-color: rgba(255, 43, 68, 0.534); }
-      .cursos_card_niveles_ocho_paragraph {
-        font-size: 0.9375rem;
-        margin: 0.9375rem; }
+        .cursos_card_niveles {
+          grid-area: niveles;
+          display: grid;
+          grid-template-areas: "tres cinco ocho";
+          margin-left: 3.75rem;
+          margin-right: 4.375rem;
+          margin-bottom: 3.125rem; } }
+      .cursos_card_niveles_tres {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin-top: 1.5625rem;
+        width: 90%;
+        border-radius: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        grid-area: tres; }
+        .cursos_card_niveles_tres_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_niveles_tres_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
+      .cursos_card_niveles_cinco {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin-top: 1.5625rem;
+        width: 90%;
+        border-radius: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        grid-area: cinco; }
+        .cursos_card_niveles_cinco_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_niveles_cinco_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
+      .cursos_card_niveles_ocho {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin-top: 1.5625rem;
+        margin-bottom: 1.5625rem;
+        width: 90%;
+        border-radius: 0.9375rem;
+        grid-area: ocho; }
+        .cursos_card_niveles_ocho_title {
+          margin-top: 0.9375rem;
+          font-size: 1.875rem;
+          text-align: center;
+          background-color: rgba(255, 43, 68, 0.534); }
+        .cursos_card_niveles_ocho_paragraph {
+          font-size: 0.9375rem;
+          margin: 0.9375rem; }
