@@ -1,6 +1,4 @@
-.Saltos {
-    &_main_principal {
-        overflow: -moz-hidden-unscrollable;
+.Saltos_main_principal {
         &_parallax {
             background-image: url("../imagenes/saltosparallax.jpg");
             @include parallax;
@@ -18,7 +16,7 @@
 
 
             &_title {
-                color: map-get($map: $palette, $key: "light" );
+                color: map-get($map: $palette, $key: "dark");
                 font-size: 3em;
                 font-weight: bold;
                 padding-left: 15px;
@@ -26,7 +24,7 @@
                 margin-top: 70px;
 
                 @media (min-width:992px) {
-                    color: map-get($map: $palette, $key: "dark" );
+                    color: map-get($map: $palette, $key: "dark");
                     font-size: 7em;
                     grid-row-start: 1;
                     grid-row-end: 3;
@@ -41,9 +39,9 @@
                 margin-top: 0%;
                 margin-bottom: 0%;
                 padding-left: 15px;
+                color: map-get($map: $palette, $key: "dark");
 
                 @media (min-width:992px) {
-                    color: map-get($map: $palette, $key: "dark" );
                     font-size: 4em;
                     grid-row-start: 3;
                     grid-row-end: 4;
@@ -65,16 +63,16 @@
                 background-image: url("../imagenes/fondo.png");
                 @include parallax;
                 display: grid;
-                grid-template-areas: 
-                "escrito1  imagen"
-                "escrito2  imagen"
-                "imagen2 explicacion";
+                grid-template-areas:
+                    "escrito1 none imagen"
+                    "escrito2 none imagen"
+                    "imagen2 explicacion explicacion";
                 align-items: space-around;
                 justify-content: center;
                 justify-items: center;
                 align-content: center;
                 overflow: hidden;
-                overflow:-moz-scrollbars-none;
+                overflow: -moz-scrollbars-none;
             }
 
 
@@ -82,18 +80,19 @@
                 @include flex(center, none, none, center);
                 flex-direction: column;
                 width: 100%;
+                z-index: 2;
 
 
                 &_paragraph {
-                    color: map-get($map: $palette, $key: "light" );
+                    color: map-get($map: $palette, $key: "light");
                     font-size: toRem(28);
                     font-weight: 500;
                     text-align: center;
                     padding-top: toRem(20);
 
                     @media (min-width:992px) {
-                        color: map-get($map: $palette, $key: "dark" );
-                        font-size: toRem(70);
+                        color: map-get($map: $palette, $key: "dark");
+                        font-size: toRem(50);
                         font-weight: bold;
                         padding-top: toRem(30);
                         padding-left: toRem(25);
@@ -104,14 +103,14 @@
                 }
 
                 &_paragraph_dos {
-                    color: map-get($map: $palette, $key: "light" );
+                    color: map-get($map: $palette, $key: "light");
                     font-size: toRem(25);
                     font-weight: 500;
                     text-align: center;
                     padding-top: toRem(10);
 
                     @media (min-width:992px) {
-                        color: map-get($map: $palette, $key: "dark" );
+                        color: map-get($map: $palette, $key: "dark");
                         font-size: toRem(30);
                         font-weight: 300;
                         padding-top: toRem(20);
@@ -128,8 +127,9 @@
                 @media (min-width:992px) {
                     display: block;
                     grid-area: imagen;
-                    overflow:hidden;
-                    
+                    overflow: hidden;
+                    z-index: 1;
+
                 }
 
 
@@ -166,9 +166,9 @@
                     background-color: map-get($map: $palette, $key: "light_gradient");
                     border-radius: toRem(80);
                     grid-area: "texto";
-                    font-size: toRem(20);
-                    font-weight: 500;
-                    width: 80%;
+                    font-size: toRem(18);
+                    font-weight: 300;
+                    width: 100%;
                     padding-top: toRem(70);
                     padding-left: toRem(50);
                     padding-right: toRem(50);
@@ -177,12 +177,12 @@
                 }
 
                 p {
-                    color:map-get($map: $palette, $key: "light" );
+                    color: map-get($map: $palette, $key: "light");
                     margin-left: toRem(10);
                     margin-top: toRem(10);
 
                     @media (min-width:992px) {
-                        color:map-get($map: $palette, $key:"dark" );
+                        color: map-get($map: $palette, $key: "dark");
                         margin-top: toRem(5)
                     }
                 }
@@ -191,20 +191,22 @@
             &_cta {
                 @extend %cta;
                 padding: toRem(5);
-               
+
 
                 @media (min-width:992px) {
                     grid-column-start: 2;
                     grid-column-end: 3;
+                    grid-row-start: 4;
+                    grid-row-end: 5;
                     padding: toRem(10);
-                    
+
                 }
             }
         }
 
         &_videos {
             padding-top: toRem(30);
-                padding-bottom: toRem(30);
+            padding-bottom: toRem(30);
             @include flex(space-evenly, center, none, center);
             flex-direction: column;
 
@@ -213,102 +215,97 @@
                 flex-direction: row;
             }
 
-            iframe{
+            iframe {
                 padding-top: toRem(10);
             }
         }
 
-            &_recomendaciones {
-                @include flex(center, center, center, center);
-                flex-direction: column;
-                background-image: url("../imagenes/fondo_recomendaciones.jpg");
-                @include parallax;
+        &_recomendaciones {
+            @include flex(center, center, center, center);
+            flex-direction: column;
+            background-image: url("../imagenes/fondo_recomendaciones.jpg");
+            @include parallax;
+
+            @media (min-width:992px) {
+                padding-top: toRem(25);
+                padding-bottom: toRem(35);
+                display: grid;
+                grid-template-areas:
+                    "title title title"
+                    "fisicas imagen indumentaria";
+
+            }
+
+
+            &_title {
+                font-size: toRem(50);
+                text-align: center;
 
                 @media (min-width:992px) {
-                    padding-top: toRem(25);
-                    padding-bottom: toRem(35);
-                    display: grid;
-                    grid-template-areas:
-                        "title title title"
-                        "fisicas imagen indumentaria";
-
+                    grid-area: title;
+                    font-size: toRem(50);
+                    font-weight: bold;
+                    text-align: center;
+                    padding-bottom: toRem(20);
                 }
+            }
 
+            &_fisicas {
+                background-color: map-get($map: $palette, $key: "light_gradient");
+                padding: toRem(20);
+
+
+                @media (min-width:992px) {
+                    grid-area: fisicas;
+                    background-color: map-get($map: $palette, $key: "light_gradient");
+                    border-radius: toRem(25);
+                    margin-left: toRem(40);
+                    padding-bottom: toRem(20);
+                }
 
                 &_title {
-                    font-size: toRem(50);
-                    text-align: center;
-
-                    @media (min-width:992px) {
-                        grid-area: title;
-                        font-size: toRem(50);
-                        font-weight: bold;
-                        text-align: center;
-                        padding-bottom: toRem(20);
+                    @media (min-width:992) {
+                        padding-left: toRem(30);
+                        padding-top: toRem(20);
                     }
                 }
 
-                &_fisicas {
-                    background-color: map-get($map: $palette, $key: "light_gradient" );
-                    padding: toRem(20);
-                   
+                p {
+                    @media (min-width:992) {
+                        padding-left: toRem(30);
+                    }
+                }
+            }
 
+            &_indumentaria {
+                background-color: map-get($map: $palette, $key: "light_gradient");
+                padding: toRem(20);
+
+                @media (min-width:992px) {
+                    grid-area: indumentaria;
+                    border-radius: toRem(25);
+                    margin-right: toRem(40);
+                    padding-bottom: toRem(20);
+                }
+
+                &_title {
                     @media (min-width:992px) {
-                        grid-area: fisicas;
-                        background-color: map-get($map: $palette, $key: "light_gradient" );
-                        border-radius: toRem(25);
-                        margin-left: toRem(40);
-                        padding-bottom: toRem(20);
-                    }
-
-                    &_title {
-                        @media (min-width:992) {
-                            padding-left: toRem(30);
-                            padding-top: toRem(20);
-                        }
-                    }
-
-                    p {
-                        @media (min-width:992) {
-                            padding-left: toRem(30);
-                        }
+                        padding-left: toRem(30);
+                        padding-top: toRem(20);
                     }
                 }
 
-                &_indumentaria {
-                    background-color: map-get($map: $palette, $key: "light_gradient" );
-                    padding: toRem(20);
+                p {
                     @media (min-width:992px) {
-                        grid-area: indumentaria;
-                        border-radius: toRem(25);
-                        margin-right: toRem(40);
-                        padding-bottom: toRem(20);
-                    }
-
-                    &_title {
-                        @media (min-width:992px) {
-                            padding-left: toRem(30);
-                            padding-top: toRem(20);
-                        }
-                    }
-
-                    p {
-                        @media (min-width:992px) {
-                            padding-left: toRem(30);
-                        }
+                        padding-left: toRem(30);
                     }
                 }
+            }
 
-                &_img_rec {
-                    @media (min-width:992px) {
-                        grid-area: imagen;
-                    }
+            &_img_rec {
+                @media (min-width:992px) {
+                    grid-area: imagen;
                 }
             }
         }
     }
-    
-
-            
-        
-    
