@@ -1,4 +1,5 @@
 .contact_main_principal {
+    overflow: hidden;
     &_parallax {
         @include flex (space-evenly, center, center, center);
         flex-direction: column;
