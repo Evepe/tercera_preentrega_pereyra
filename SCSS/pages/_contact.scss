@@ -22,7 +22,7 @@
             font-size: toRem(170);
             word-break: break-all;
             font-weight: bolder;
-            z-index: 0;
+           
 
             @media (min-width:992px) {
                 font-size: toRem(230);
@@ -64,6 +64,7 @@
                 "formulario horarios";
                 justify-content: space-evenly;
                 align-items: flex-start;
+                padding-bottom: toRem(20);
             background-image: url("../imagenes/fondo.png");
         }
 

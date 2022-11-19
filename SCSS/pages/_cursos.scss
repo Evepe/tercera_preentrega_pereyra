@@ -372,14 +372,14 @@
         }
 
         &_niveles {
-            @include flex(center, center, center, center);
-            flex-direction: column;
+            display: none;
 
             @media (min-width:992px) {
                 grid-area: niveles;
                 display: grid;
                 grid-template-areas:
                     "tres cinco ocho";
+                    align-items: stretch;
                 margin: {
                     left: toRem(60);
                     right: toRem(70);
@@ -451,6 +451,14 @@
                     margin: toRem(15);
 
                 }
+            }
+        }
+
+        &_niveles_mobile{
+            display: inline-block;
+            width: 100%;
+            @media (min-width:992px) {
+                display: none;
             }
         }
     }
