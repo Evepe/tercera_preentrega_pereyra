@@ -1,5 +1,5 @@
 .footer {
-    background-image: url("../Imagenes/logo_fondo.gif");
+    background-image: url("../imagenes/logo_fondo.gif");
     @include parallax;
     background-size: inherit;
     @include flex (space-around, center, none, center);
