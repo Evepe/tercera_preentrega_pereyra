@@ -9746,6 +9746,7 @@ a {
           display: grid;
           grid-template-areas: "tres cinco ocho";
           align-items: stretch;
+          justify-items: center;
           margin-left: 3.75rem;
           margin-right: 4.375rem;
           margin-bottom: 3.125rem; } }
