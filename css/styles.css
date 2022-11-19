@@ -8489,7 +8489,7 @@ a {
           color: red; } }
 
 .footer {
-  background-image: url("../Imagenes/logo_fondo.gif");
+  background-image: url("../imagenes/logo_fondo.gif");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -8507,7 +8507,9 @@ a {
     .footer {
       background-image: none;
       display: grid;
-      grid-template-areas: ". marca ." "datos marca redes" ". marca ."; } }
+      grid-template-areas: ". marca ."
+ "datos marca redes"
+ ". marca ."; } }
   .footer_contact p:nth-child(1) {
     font-weight: bold; }
   @media (min-width: 992px) {
@@ -8753,7 +8755,9 @@ a {
 @media (min-width: 992px) {
   .main_principal .salto {
     display: grid;
-    grid-template-areas: "encabezado encabezado encabezado" ". cont ." "buttom . .";
+    grid-template-areas: "encabezado encabezado encabezado"
+ ". cont ."
+ "buttom . .";
     gap: 15px; } }
 
 .main_principal .salto_parallax {
@@ -8845,7 +8849,9 @@ a {
   @media (min-width: 992px) {
     .main_principal .curso {
       display: grid;
-      grid-template-areas: "presentacion presentacion presentacion" ". articulo ." "boton . .";
+      grid-template-areas: "presentacion presentacion presentacion"
+ ". articulo ."
+ "boton . .";
       gap: 15px; } }
   .main_principal .curso_parallax {
     background-image: url("../imagenes/saltosseccion.jpg");
@@ -9094,7 +9100,8 @@ a {
   @media (min-width: 992px) {
     .contact_main_principal_content {
       display: grid;
-      grid-template-areas: "formulario  mapa" "formulario horarios";
+      grid-template-areas: "formulario  mapa"
+ "formulario horarios";
       justify-content: space-evenly;
       align-items: flex-start;
       padding-bottom: 1.25rem;
@@ -9265,7 +9272,9 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       display: grid;
-      grid-template-areas: "escrito1 none imagen" "escrito2 none imagen" "imagen2 explicacion explicacion";
+      grid-template-areas: "escrito1 none imagen"
+ "escrito2 none imagen"
+ "imagen2 explicacion explicacion";
       align-items: space-around;
       justify-content: center;
       justify-items: center;
@@ -9409,7 +9418,8 @@ a {
       padding-top: 1.5625rem;
       padding-bottom: 2.1875rem;
       display: grid;
-      grid-template-areas: "title title title" "fisicas imagen indumentaria"; } }
+      grid-template-areas: "title title title"
+ "fisicas imagen indumentaria"; } }
   .Saltos_main_principal_recomendaciones_title {
     font-size: 3.125rem;
     text-align: center; }
@@ -9551,7 +9561,9 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         display: grid;
-        grid-template-areas: "card card imagen" "etapas etapas etapas" "niveles niveles niveles"; } }
+        grid-template-areas: "card card imagen"
+ "etapas etapas etapas"
+ "niveles niveles niveles"; } }
     .cursos_card_wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -9650,7 +9662,9 @@ a {
         .cursos_card_etapas {
           grid-area: etapas;
           display: grid;
-          grid-template-areas: "imagen_one uno" "dos imagen_dos" "imagen_tres tres";
+          grid-template-areas: "imagen_one uno"
+ "dos imagen_dos"
+ "imagen_tres tres";
           gap: 1.25rem; } }
       .cursos_card_etapas_uno {
         background-color: rgba(255, 255, 255, 0.397);
