@@ -1,0 +1,192 @@
+.contact_main_principal {
+
+    &_parallax {
+        @include flex (space-evenly, center, center, center);
+        flex-direction: column;
+        background-image: url("../imagenes/fotoSchool.jpg");
+        @include parallax;
+        height: 100vh;
+
+
+
+        @media (min-width:992px) {
+            background-attachment: fixed;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: toRem(15);
+        }
+
+        &_text_background {
+            color: rgba(0, 0, 0, 0.238);
+            font-size: toRem(170);
+            word-break: break-all;
+            font-weight: bolder;
+           
+
+            @media (min-width:992px) {
+                font-size: toRem(230);
+                position: absolute;
+            }
+        }
+
+        &_title {
+            color: map-get($map: $palette, $key: "light");
+            font-size: 3em;
+            font-weight: bold;
+            padding-left: 15px;
+            position: absolute;
+            margin-top: 70px;
+
+            @media (min-width:992px) {
+                color: map-get($map: $palette, $key: "dark");
+                font-size: 7em;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 4;
+                grid-column-end: 6;
+            }
+        }
+
+    }
+
+    &_content {
+        @include flex (center, center, stretch, center);
+        flex-direction: column;
+        background-image: url("../imagenes/fondo_curso_mobile.jpg");
+        @include parallax;
+
+
+        @media (min-width:992px) {
+            display: grid;
+            grid-template-areas:
+                "formulario  mapa"
+                "formulario horarios";
+                justify-content: space-evenly;
+                align-items: flex-start;
+                padding-bottom: toRem(20);
+            background-image: url("../imagenes/fondo.png");
+        }
+
+        &_escribinos {
+            background-color: #00000079;
+            border-radius: toRem(20); 
+            padding:toRem(30);
+
+            @media (min-width:992px) {
+                @include flex(center, center, center, center);
+                flex-direction: column;
+                border-radius: toRem(20);
+                grid-area: formulario;
+                margin: {
+                    top:toRem(15);
+                    left: toRem(15);
+                };
+                padding: {
+                    left: 0;
+                };
+            }
+
+            &_title {
+                color: map-get($map: $palette, $key: "light");
+                font-size: toRem(28);
+                font-weight: 500;
+                text-align: center;
+                padding-top: toRem(20);
+
+                @media (min-width:992px) {
+                    color: map-get($map: $palette, $key: "dark");
+                    font-size: toRem(70);
+                    font-weight: bold;
+                    padding-top: toRem(30);
+                    padding-left: toRem(25)
+                }
+            }
+
+            label {
+                color: map-get($map: $palette, $key: "light");
+            }
+
+            .buton {
+                @extend %cta;
+                color: map-get($map: $palette, $key: "dark");
+
+                @media (min-width:992px) {
+                    color: map-get($map: $palette, $key: "light");
+                    background-color: map-get($map: $palette, $key: "background_button");
+
+                    &:hover {
+                        color: map-get($map: $palette, $key: "background_button");
+                        background-color: map-get($map: $palette, $key: "light");
+                    }
+
+                }
+
+            }
+
+        }
+
+        &_ubicacion {
+            @include flex (center, center, center, center);
+            flex-direction: column;
+            background-color: #00000079;
+            border-radius: toRem(20);
+            padding: toRem(30) toRem(20);
+            margin: toRem(20) toRem(5);
+
+            @media (min-width:992px) {
+                border-radius: toRem(20);
+                padding: toRem(30);
+                margin: toRem(20);
+                grid-area: mapa;
+            }
+
+            &_title {
+                color: map-get($map: $palette, $key: "light");
+                font-size: toRem(28);
+                font-weight: 500;
+                text-align: center;
+                padding-top: toRem(20);
+
+                @media (min-width:992px) {
+                    color: map-get($map: $palette, $key: "dark");
+                    font-size: toRem(70);
+                    font-weight: bold;
+                    padding-top: toRem(30);
+                    padding-left: toRem(25)
+                }
+            }
+
+            &_maps_direccion_google_deskop {
+                display: none;
+
+                @media (min-width:992px) {
+                    display: block;
+
+                }
+            }
+
+            &_maps_direccion_google_mobile {
+                display: inline-block;
+
+                @media (min-width:992px) {
+                    display: none;
+
+                }
+            }
+
+            &_horarios_atencion {
+                background-color: map-get($map: $palette , $key: "light_gradient");
+                border-bottom: toRem(25);
+
+                @media (min-width:992px) {
+                    background-color: map-get($map: $palette , $key: "light_gradient");
+                    border-bottom: toRem(25);
+                    padding: toRem(25);
+                    grid-area: horarios;
+                }
+            }
+        }
+    }
+}
+                

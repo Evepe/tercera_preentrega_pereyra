@@ -1,0 +1,32 @@
+$font-family-sans-serif:      'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-family-monospace:       'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+//bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//utilities
+
+@import 
+        "./utilities/variables",
+         "./utilities/mixins";
+
+//components
+@import 
+        "./components/buttons";
+
+//base
+@import 
+        "./base/fonts",
+         "./base/reset";
+
+//layout
+@import 
+        "./layout/navigator",
+         "./layout/footer";
+
+//pages
+@import "./pages/index",
+         "./pages/promociones",
+         "./pages/contact",
+         "./pages/salto_bautismo.scss",
+         "./pages/cursos.scss";
